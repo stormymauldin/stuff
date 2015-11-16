@@ -31,3 +31,8 @@ context University
     -- four characters long
     inv StudentIdMustBeLength4:
        self.students->forAll(s|s.id.size() = 4)
+
+    -- A student's id number must be unique
+    inv UniqueId:
+        self.students->forAll(s1, s2: Student |
+                        s1 <> s2 implies s1.id <> s2.id)
