@@ -1,0 +1,32 @@
+-- $ProjectHeader: use 2-1-0-release.1 Sun, 09 May 2004 13:57:11 +0200 mr $
+
+model t002
+
+enum colorEnum { red, green, blue }
+
+class A
+attributes
+  a : OclAny
+operations
+  fac(n : Integer) : Integer =
+    if n <= 1 then 1 else n * self.fac(n - 1) endif
+
+  allBs() : Set(B) =
+    self.b->union(self.b.allBs())
+end
+
+class B < A
+end
+
+class C
+end
+
+association A_C between
+  A[*]
+  C[*]
+end  
+
+association A_B between
+  A[*]
+  B[0..1]
+end  

@@ -1,0 +1,16 @@
+# $ProjectHeader: use 2-1-0-release.1 Sun, 09 May 2004 13:57:11 +0200 mr $
+
+# See the README file in this directory for information about the file
+# format.
+
+#
+## Tuple literals
+#
+
+? Tuple{a : 2, b:3, c:'foo'}
+*-> Tuple{a:2,b:3,c:'foo'} : Tuple(a:Integer,b:Integer,c:String)
+
+? Set{1,2}->collect(e | Tuple{a : 'foo', b:e})
+*-> Bag{Tuple{a:'foo',b:1},Tuple{a:'foo',b:2}} : Bag(Tuple(a:String,b:Integer))
+
+exit

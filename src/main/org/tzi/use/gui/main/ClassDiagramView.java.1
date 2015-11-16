@@ -1,0 +1,111 @@
+/*
+ * USE - UML based specification environment
+ * Copyright (C) 1999-2004 Mark Richters, University of Bremen
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License as
+ * published by the Free Software Foundation; either version 2 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.  
+ */
+
+/* $ProjectHeader: use 2-1-0-release.1 Sun, 09 May 2004 13:57:11 +0200 mr $ */
+
+package org.tzi.use.gui.main;
+import org.tzi.use.config.Options;
+import org.tzi.use.uml.mm.*;
+import org.tzi.use.graph.*;
+import javax.swing.JInternalFrame;
+import javax.swing.ImageIcon;
+import java.util.*;
+
+import GraphDrawing.Algorithm.OrthogonalLayoutAlgorithm;
+import GraphDrawing.util.Layout;
+import GraphDrawing.Graph.UML.*;
+import GraphDrawing.Graph.*;
+import GraphDrawing.Drawing.GraphWindow;
+
+/** 
+ * @version 	$ProjectVersion: 2-1-0-release.1 $
+ * @author 	Mark Richters
+ */
+
+class ClassDiagramView {
+
+    ClassDiagramView(MModel model) {
+	ClassDiagram cd = new ClassDiagram();
+	Map cls2vertex = new HashMap();
+
+	// add class vertices to graph
+	Iterator clsIter = model.classes().iterator();
+	while ( clsIter.hasNext() ) {
+	    MClass cls = (MClass) clsIter.next();
+	    UMLClass gcls = new UMLClass(cls.name());
+	    Iterator iter = cls.attributes().iterator();
+	    while ( iter.hasNext() )
+		gcls.addAttribute(iter.next().toString());
+	    iter = cls.operations().iterator();
+	    while ( iter.hasNext() )
+		gcls.addOperation(((MOperation) iter.next()).signature());
+
+	    cd.addVertex(gcls);
+	    cls2vertex.put(cls, gcls);
+	}
+
+	// add association edges to graph
+	Iterator assocIter = model.associations().iterator();
+	while ( assocIter.hasNext() ) {
+	    MAssociation assoc = (MAssociation) assocIter.next();
+
+	    Association gassoc;
+	    switch ( assoc.aggregationKind() ) {
+	    case MAggregationKind.COMPOSITION: 
+		gassoc = new Composition();
+		break;
+	    case MAggregationKind.AGGREGATION: 
+		gassoc = new Aggregation();
+		break;
+	    default:
+		gassoc = new Association();
+	    }
+	    
+	    List aendList = assoc.associationEnds();
+	    MAssociationEnd aend0 = (MAssociationEnd) aendList.get(0);
+	    gassoc.setSourceVertex((Vertex) cls2vertex.get(aend0.cls()));
+	    MAssociationEnd aend1 = (MAssociationEnd) aendList.get(1);
+	    gassoc.setTargetVertex((Vertex) cls2vertex.get(aend1.cls()));
+
+	    gassoc.setName(assoc.name());
+	    gassoc.setRole(aend0.name(), aend1.name());
+	    gassoc.setMultiplicity(aend0.multiplicity().toString(), 
+				   aend1.multiplicity().toString());
+
+	    cd.addEdge(gassoc);
+	}
+
+	// add generalization edges to graph
+	DirectedGraph genGraph = model.generalizationGraph();
+	Iterator edgeIter = genGraph.edgeIterator();
+	while ( edgeIter.hasNext() ) {
+	    MGeneralization gen = (MGeneralization) edgeIter.next();
+
+	    Generalization ggen = new Generalization();
+	    ggen.setSourceVertex((Vertex) cls2vertex.get(gen.parent()));
+	    ggen.setTargetVertex((Vertex) cls2vertex.get(gen.child()));
+	    cd.addEdge(ggen);
+	}
+
+        OrthogonalLayoutAlgorithm algorithm = new OrthogonalLayoutAlgorithm(cd);
+        Layout layout = algorithm.computeLayout();
+	new GraphWindow(layout);
+    }
+}
+

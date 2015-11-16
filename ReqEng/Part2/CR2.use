@@ -1,0 +1,37 @@
+-- Course Registration example for ReqEng Assignment 4
+
+model CourseRegistration_2
+
+-- classes
+
+class University
+end
+
+class Student
+operations
+  drop(c : Course)
+end
+
+
+class Course
+attributes
+  isFull : Boolean
+end
+
+
+
+-- associations
+
+association EnrolledAtUniversity between
+  Student[*] role students
+  University[0..1] role isEnrolledAt
+end
+
+association TakingCourse between
+  Student[*] role studentsEnrolled
+  Course[*] role takingCourses
+end
+
+
+-- OCL constraints
+

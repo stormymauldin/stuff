@@ -1,0 +1,3890 @@
+2004-05-09  Mark Richters  <mr@mrichters.de>
+
+	* use.prj: Changed to next release version number.
+
+	* Version 2.1.0 released.
+
+	* VERSION: 0.243
+
+	* README: Add acknowledgments.
+
+	* HACKING: New file.
+
+2004-05-03  Mark Richters  <mr@mrichters.de>
+
+	* VERSION: 0.242
+
+	* src/main/org/tzi/use/gui/main/MainWindow.java (close): Handle
+	window close the same way whether called via menu or window close
+	event. Don't call System.exit.
+
+	* build.xml (release): Set executable file permissions for perl
+	scripts in test directory.
+
+	* use.prj: Set version to pre2.
+
+	* bin/use: Fix path magic for users with CDPATH set.
+
+2004-05-02  Mark Richters  <mr@mrichters.de>
+
+	* VERSION: 0.241
+
+	* use.prj: Update Populate-Ignore list. Set version to pre1.
+
+	* intern/www/index.html.in: Update.
+
+	* build.xml (all): Use only targets that work with the release
+	version.
+	(doc): Check that intern directory exists.
+	(release): Add eclipse project files and ChangeLog to release.
+
+	* src/main/org/tzi/use/gui/util/Selection.java: Fix for jikes-1.20.
+	* src/main/org/tzi/use/main/Session.java: Ditto.
+
+	* bin/use.bat: Fix batch file: Pass %CMD_LINE_ARGS% to VM.
+
+	* src/test/org/tzi/use/parser/USECompilerTest.java: Fix test
+	failure on Windows: Ignore platform dependent line endings when
+	comparing actual output with expected output.
+
+	* VERSION: 0.240
+
+	* intern/Release-HOWTO: Update w.r.t. ant build.
+
+	* NEWS: Update.
+
+	* INSTALL: Update documentation to new build system.
+
+	* README: Update copyright year, wording, add reference.
+
+	* Makefile: Remove all build related stuff. Leave in a few
+	maintenance tasks.
+
+	* examples/Makefile: Remove include of Makefile.inc.
+	* intern/doc/Makefile: Ditto.
+	* test/state/Makefile: Ditto.
+	* test/Makefile: Ditto.
+
+	* Makefile.inc: Remove.
+
+	* VERSION: 0.239
+
+	* src: Update copyright date in all source files.
+	
+	* VERSION: 0.238
+
+	* src/test/org/tzi/use/parser/test_spec.use: Move from src/main.
+
+	* test/t014.in: Add a tuple test.
+
+	* src/main/org/tzi/use/parser/USECompiler_test1.java: Remove.
+	* src/main/org/tzi/use/parser/USECompiler_test2.java: Ditto.
+	* src/main/org/tzi/use/parser/CarRental.use: Ditto.
+	* src/main/org/tzi/use/parser/CarRental.use.1: Ditto.
+	* src/main/org/tzi/use/parser/test_expr2.use: Ditto.
+	* src/main/org/tzi/use/parser/Makefile: Ditto.
+
+	* src/test/org/tzi/use/parser/USECompilerTest.java: Add test from
+	USECompiler_test1.java. Be quiet by default.
+
+	* src/main/org/tzi/use/parser/test_expr.in: Rename from
+	src/test/org/tzi/use/parser/test_expr.use.
+
+2004-05-01  Mark Richters  <mr@mrichters.de>
+
+	* VERSION: 0.237
+
+	* src/test/org/tzi/use/uml/ocl/expr/ExpQueryTest.java: Rename from
+	src/main/org/tzi/use/uml/ocl/expr/ExpQuery_test.java. Convert to
+	junit test.
+
+	* src/main/org/tzi/use/uml/ocl/expr/Makefile: Remove.
+	* src/main/org/tzi/use/main/Makefile: Ditto.
+	* src/main/org/tzi/use/gui/views/Makefile: Ditto.
+	* src/main/org/tzi/use/gui/util/Makefile: Ditto.
+	* src/main/org/tzi/use/gui/main/Makefile: Ditto.
+
+2004-04-28  Mark Richters  <mr@mrichters.de>
+
+	* VERSION: 0.236
+
+	* src/main/org/tzi/use/uml/ocl/type/Makefile: Remove.
+	* src/main/org/tzi/use/uml/ocl/value/Makefile: Ditto.
+	* src/main/org/tzi/use/uml/mm/Makefile: Ditto.
+	* src/main/org/tzi/use/uml/sys/Makefile: Ditto.
+
+	* src/test/org/tzi/use/util/FilterIteratorTest.java: Clean up.
+	* src/test/org/tzi/use/util/StringUtilTest.java: Likewise.
+	* src/test/org/tzi/use/util/ReportTest.java: Likewise.
+	* src/test/org/tzi/use/util/HashMultiMapTest.java: Likewise.
+
+	* src/test/org/tzi/use/uml/ocl/expr/ExpStdOpTest.java: Rename from
+	src/main/org/tzi/use/uml/ocl/expr/ExpStdOp_test.java. Convert to
+	junit test.
+
+	* src/test/org/tzi/use/uml/ocl/expr/EvaluatorTest.java: Rename
+	from
+	src/main/org/tzi/use/uml/ocl/expr/Evaluator_test.java. Convert to
+	junit test.
+
+	* src/test/org/tzi/use/uml/ocl/value/ValueTest.java: Rename from
+	src/main/org/tzi/use/uml/ocl/value/Value_test.java. Convert to junit
+	test.
+
+	* src/test/org/tzi/use/uml/ocl/type/TypeTest.java: Rename from
+	src/main/org/tzi/use/uml/ocl/type/Type_test.java. Convert to junit
+	test.
+
+2004-04-26  Mark Richters  <mr@mrichters.de>
+
+	* VERSION: 0.235
+
+	* build.xml (test-junit): Halt on failures.
+
+	* src/main/org/tzi/use/parser/test/Makefile: Remove.
+
+	* src/test/org/tzi/use/parser/USECompilerTest.java: Rename from
+	src/main/org/tzi/use/parser/test/TestDriver.java. Convert to junit
+	test.
+
+	* src/main/org/tzi/use/parser/test: Move test files to
+	src/test/org/tzi/use/parser/test.
+
+	* src/main/org/tzi/use/parser/test: Remove symlinks to example
+	dir. Example files are now read directly from examples dir.
+
+	* VERSION: 0.234
+
+	* README: Rename from README.in. Drop token substitution
+	(makes things just complicated). Update copyright year, wording,
+	add reference.
+
+	* intern/www: Remove README, NEWS, INSTALL, home.html
+	symlinks. The last one is obsolete, the other are copied by ant
+	release target from basedir.
+
+	* intern/www/index.html.in: Make links to external pages fully
+	qualified. Add links to download 2.0.1 version.
+
+	* intern/www/epilog1: Make links to external pages fully
+	qualified.
+
+	* build.xml: Add doc and release target.
+
+2004-04-25  Mark Richters  <mr@mrichters.de>
+
+	* VERSION: 0.233
+
+	* src/main/org/tzi/use/parser/GLexer.java: Add to version control.
+	* src/main/org/tzi/use/parser/GParser.java: Ditto.
+	* src/main/org/tzi/use/parser/GUSETokenTypes.java: Ditto. 
+	* src/main/org/tzi/use/parser/GUSETokenTypes.txt: Ditto.
+
+	* .classpath: Add eclipse project file.
+	* .project: Ditto.
+
+	* VERSION: 0.232
+
+	* intern/envtest2junit.pl: Add for semi-automatic test conversion.
+
+	* src/test/org/tzi/use/uml/mm/MMultiplicityTest.java: Move from
+	src/main/org/tzi/use/uml/mm/MMultiplicity_test.java. Change to
+	junit test.
+
+	* src/test/org/tzi/use/graph/GraphTest.java: Move from
+	src/main/org/tzi/use/graph/Graph_test.java. Change to junit test.
+
+	* src/test/org/tzi/use/util/ReportTest.java: Move from
+	src/main/org/tzi/use/util/Report_test.java. Change to junit test.
+
+	* src/test/org/tzi/use/util/StringUtilTest.java: Move from
+	src/main/org/tzi/use/util/StringUtil_Test.java.
+
+	* src/main/org/tzi/use/util/StringUtil_test.java: 
+	Remove. Replace by junit test.
+
+	* src/main/org/tzi/use/util/HashMultiMap_test.java:
+	Remove. Replace by junit test.
+
+	* src/test/org/tzi/use/util/HashMultiMapTest.java: Move from
+	src/main/org/tzi/use/util/HashMultiMap_Test.java.
+
+	* src/test/org/tzi/use/util/FilterIteratorTest.java: Move from
+	src/main/org/tzi/use/util/FilterIterator_Test.java.
+
+	* src/main/org/tzi/use/util/FilterIterator_test.java:
+	Remove. Replace by junit test.
+
+	* src/main/org/tzi/use/config/Makefile: Remove.
+	* src/main/org/tzi/use/util/cmd/Makefile: Ditto.
+	* src/main/org/tzi/use/util/Makefile: Ditto.
+	* src/main/org/tzi/use/graph/Makefile: Ditto.
+	* src/main/org/tzi/use/graph/layout/Makefile: Ditto.
+	* src/main/org/tzi/use/util/input/Makefile: Ditto.
+
+	* build.xml: Adapt to new source tree layout with separate test tree.
+
+	* VERSION: 0.231
+
+	* src/main: Add new directory so that junit tests can be moved to
+	src/test.
+
+	* build.xml: Adapt to new source tree layout.
+
+	* VERSION: 0.230
+
+	* src/org/tzi/use/uml/mm/MMultiplicity.java: Fix javadoc warnings.
+	* src/org/tzi/use/graph/DirectedGraphBase.java: Likewise.
+	* src/org/tzi/use/graph/DirectedGraph.java: Likewise.
+	* src/org/tzi/use/gui/views/NewObjectDiagram.java: Likewise.
+	* src/org/tzi/use/uml/ocl/expr/VarDecl.java: Likewise.
+	* src/org/tzi/use/uml/ocl/expr/EvalContext.java: Likewise.
+
+	* build.xml (javadoc): Add custom tag handling for @pre. Generate
+	parser files before generating javadoc.
+
+	* VERSION: 0.229
+
+	* build.xml: Remove antlr library build. Use it as provided.
+
+	* lib/antlrall.jar: Add from ANTLR-2.7.1.
+
+	* src/antlr: Removed all ANTLR source since they are identical to
+	ANTLR-2.7.1 release.
+
+	* lib/antlr-license.txt: Move from COPYING.ANTLR.
+
+	* lib/junit-license.html: Copy from junit distribution.
+
+	* README.in: Update third-party libraries comment.
+
+	* VERSION: 0.228
+
+	* build.xml: Major changes. Organize properties. Add help, and
+	test-other target.
+
+	* examples/Makefile (USE): Fix path to use script.
+
+	* test/mkcmd.pl: Fix path to perl interpreter.
+	* test/mkout.pl: Ditto.
+
+	* javadoc/Makefile: Remove. Javadoc is now generated via ant in
+	build/javadoc.
+
+	* VERSION: 0.227
+
+	* bin/use.bat: Rewrite. Based on ant.bat, may run jar files from
+	build or release directory. Increased available memory.
+
+	* bin/lcp.bat: New. Used by use.bat.
+
+	* bin/use: Rewrite. Now supports symlink to start script, may run
+	jar files from build or release directory. Increased available
+	memory.
+
+	* bin/use.new: Remove.
+
+	* bin/use_nojit: Remove.
+
+2003-10-12  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.226
+
+	* src/org/tzi/use/main/MonitorAspectGenerator.java: sync with
+	template.
+
+	* etc/USEMonitor.java.template: updated.
+
+2003-03-19  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.225
+
+	* src/org/tzi/use/main/MonitorAspectGenerator.java: New.
+
+	* examples/monitoring: New.
+
+	* etc/USEMonitor.java.template: New.
+
+2003-03-10  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.224
+
+	* src/org/tzi/use/main/Shell.java: New command "net".
+
+	* src/org/tzi/use/util/input/SocketReadline.java: New.
+
+2002-12-14  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.223
+
+	* src/org/tzi/use/config/Options.java: Updated copyright year in
+	start message.
+
+	* build.xml: Updated copyright year for javadoc.
+
+	* VERSION: 0.222
+
+	* src/org/tzi/use/uml/ocl/value/Value_test.java: Don't create new
+	BooleanValue objects.
+	* src/org/tzi/use/uml/ocl/expr/ExpConstBoolean.java: Likewise.
+	* src/org/tzi/use/uml/ocl/expr/ExpStdOp_test.java: Likewise.
+	* src/org/tzi/use/uml/ocl/expr/ExpStdOp.java: Likewise.
+	* src/org/tzi/use/uml/ocl/expr/ExpQuery_test.java: Likewise.
+	* src/org/tzi/use/uml/ocl/expr/ExpQuery.java: Likewise.
+	* src/org/tzi/use/uml/ocl/expr/ExpOne.java: Likewise.
+
+	* src/org/tzi/use/uml/ocl/value/BooleanValue.java: Don't allow to
+	instantiate new objects.
+
+	* src/org/tzi/use/util/Report_test.java: Use Boolean constants.
+	* src/org/tzi/use/util/TestEnv.java: Likewise.
+
+	* bin/use.new: Added antlr.jar to CLASSPATH.
+
+	* build.xml: Fixed PRCS generated format string.
+
+2002-12-01  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.221
+
+	* src/org/tzi/use/gui/views/BarChartView.java: Changed deprecated
+	call.
+
+	* bin/use.new: For running from build tree.
+
+	* src/org/tzi/use/util/HashMultiMap_Test.java: Ported to junit.
+	* src/org/tzi/use/util/StringUtil_Test.java: Likewise.
+	* src/org/tzi/use/util/FilterIterator_Test.java: Likewise.
+
+	* lib/junit.jar: junit 3.8.1
+
+	* build.xml: New ANT build file.
+
+2002-03-04  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.220
+
+	* src/org/tzi/use/uml/ocl/expr/ExpStdOp.java (Op_collection_sum):
+	Bug fix: Collection of Reals may actually contain integers. Fixes
+	bug0015.
+
+	* test/t001.in (Set): Added test case for bug0015.
+
+2001-07-15  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.219
+
+	* test/t014.in: New test cases for tuples.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpTupleLiteral.java (eval): Added.
+
+	* src/org/tzi/use/uml/ocl/value/TupleValue.java: New.
+
+2001-07-14  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.218
+
+	* src/org/tzi/use/uml/ocl/expr/ExpTupleLiteral.java: New.
+
+	* src/org/tzi/use/parser/ASTTupleItem.java: New.
+
+	* src/org/tzi/use/parser/ASTTupleLiteral.java: New.
+
+	* src/org/tzi/use/uml/ocl/type/TupleType.java: New.
+
+	* src/org/tzi/use/parser/ASTType.java: Refactored. Subclasses now
+	implement different types.
+	(getStartToken): Access to start token. Removed references in
+	other classes to non-private field fName.
+
+	* src/org/tzi/use/parser/ASTSimpleType.java: New from ASTType.
+	* src/org/tzi/use/parser/ASTCollectionType.java: Likewise.
+
+	* src/org/tzi/use/parser/use.g (simpleType): Updated action code.
+	(collectionType): Likewise.
+	(tupleType): New.
+	(tuplePart): New.
+	(type): Added alternative for tupleType.
+	(literal): Added alternative for tupleLiteral.
+	(tupleLiteral): New.
+	(tupleItem): New.
+
+	* examples/OCL2MM.use: New. Derived from model of OCL 2.0 WG.
+
+2001-06-27  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.217
+
+	* NEWS: Updated.
+
+	* src/org/tzi/use/parser/ASTSetCmd.java (gen): Added type check.
+
+	* VERSION: 0.216
+
+	* all .cmd and .in files: Changed '=' to ':=' due to change in
+	syntax of !set command.
+	* intern/www: Likewise.
+
+	* src/org/tzi/use/uml/mm/MMInstanceGenerator.java (genInstance):
+	Changed '=' to ':=' due to change in syntax of !set command.
+	(visitAssociationEnd): Likewise.
+	(visitModel): Likewise.
+	(visitGeneralization): Likewise.
+	(visitClassInvariant): Likewise.
+	(visitClass): Likewise.
+
+	* src/org/tzi/use/parser/ASTSetCmd.java: Adapted to changes in the
+	grammar.
+
+	* src/org/tzi/use/parser/use.g (setCmd): Allow expression for
+	lvalue. Changed assignment token: incompatible change to syntax of
+	previous versions!
+
+	* test/t013.in: Test case for new !set syntax.
+
+	* src/org/tzi/use/uml/sys/MCmdSetAttribute.java: Take expression
+	as input.
+
+	* src/org/tzi/use/uml/sys/MSystem.java
+	(addVarBindingToCurrentScope): New.
+	(removeLastVarBindingFromCurrentScope): New.
+
+	* src/org/tzi/use/uml/sys/MCmdLet.java (execute): Don't bind
+	variables globally but only to current scope.
+
+2001-06-23  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.215
+
+	* src/org/tzi/use/uml/ocl/value/Value.java (isCollection): New.
+
+	* test/Makefile (USE): Added -nr option for ignoring readline
+	problems.
+
+	* src/org/tzi/use/uml/sys/MCmdDestroyObjects.java: Use OCL
+	expression as argument.
+	* src/org/tzi/use/uml/sys/MCmdInsertLink.java: Likewise.
+	* src/org/tzi/use/uml/sys/MCmdDeleteLink.java: Likewise.
+
+	* examples/SwapLinks.use: New example.
+
+	* src/org/tzi/use/uml/sys/MCmdLet.java: New.
+
+	* src/org/tzi/use/parser/ASTLetCmd.java: New.
+
+	* src/org/tzi/use/parser/use.g (insertCmd): Accept list of OCL
+	expressions.
+	(deleteCmd): Likewise.
+	(destroyCmd): Accept OCL expression.
+	(letCmd): New.
+	(cmdStmt): Added letCmd.
+
+	* src/org/tzi/use/parser/ASTDestroyCmd.java: Adapted to changes in
+	the grammar.
+	* src/org/tzi/use/parser/ASTDeleteCmd.java: Likewise.
+	* src/org/tzi/use/parser/ASTInsertCmd.java: Likewise.
+
+2001-06-22  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* use.prj: Changed to next release version number.
+
+	* Version 2.0.1 released.
+
+2001-06-08  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.214
+
+	* preparing 2.0.1 release.
+
+	* intern/www/index.html.in: Added link to previous version.
+
+2001-06-07  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.213
+
+	* test/t011.in: Test case for bug0014.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpQuery.java (evalSortedBy): Bug
+	fix: result sequence had wrong type. Fixes bug0014.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpSortedBy.java: Bug fix: result
+	type set in constructor used queryExp insted of rangeExp. Fixes
+	bug0014.
+
+2001-04-24  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.212
+
+	* examples/UML13All.use: Several fixes.
+
+	* src/org/tzi/use/gui/views/SequenceDiagram.java
+	(SequenceDiagram): Use font specified in properties file.
+	* src/org/tzi/use/gui/views/NewObjectDiagram.java
+	(paintComponent): Likewise.
+
+	* etc/use.properties: Added diagram fonts.
+
+2001-04-22  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.211
+
+	* src/org/tzi/use/parser/use.g (model): Allow classes,
+	associations, and constraints in any order.
+	(classDefinition): Moved "end" from model.
+
+2001-04-18  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.210
+
+	* src/org/tzi/use/uml/ocl/expr/ExpStdOp.java
+	(Op_collection_flatten.eval): Bug fix: check for undefined
+	elements. Fixes bug0013.
+	(OpGeneric.eval): Added resultType parameter.
+
+2001-04-09  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.209
+
+	* src/org/tzi/use/uml/ocl/expr/ExpStdOp.java (Op_bag_including):
+	Allow undefined element value.
+	(Op_bag_excluding): Likewise.
+	(Op_set_including): Likewise.
+	(Op_set_excluding): Likewise.
+	(Op_sequence_including): Likewise.
+	(Op_sequence_excluding): Likewise.
+
+	* test/t001.in: Test cases for the above changes.
+
+	* examples/CarRental2.use: Aligned with diss.
+
+2001-04-03  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* src/org/tzi/use/uml/sys/MCmdDestroyObjects.java (getUSEcmd): Bug
+	fix: delete -> destroy.
+
+2001-03-25  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.208
+
+	* src/org/tzi/use/main/Session.java (reset): Bug fix: check for
+	valid system.
+
+	* etc/use.el (use-generic-mode): Added "endif".
+
+	* Makefile (distfiles): Added COPYING.ANTLR.
+
+2001-03-19  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.207
+
+	* preparing 2.0.0 release.
+
+2001-03-18  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.206
+
+	* examples/UML13All.use: Renamed all occurrences of "in" to "in_".
+	* examples/actionsemantics.use: Likewise.
+	* examples/UML13Core.use: Likewise.
+
+	* src/org/tzi/use/parser/use.g (expression): Added let-expressions.
+
+	* src/org/tzi/use/parser/ASTLetExpression.java: New.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpLet.java: New.
+
+2001-03-13  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.205
+
+	* test: Renamed t?.* to t00?.*.
+
+	* test/t010.in: New.
+
+	* src/org/tzi/use/uml/sys/MSystem.java (addObject): New.
+	(deleteObject): New.
+
+	* src/org/tzi/use/uml/sys/MSystemState.java (deleteObject): Also
+	remove from system.
+
+	* test/t9.in: New.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpAsType.java (eval): Bug fix:
+	eval of value types were too restricted.
+
+	* src/org/tzi/use/uml/ocl/type/OclAnyType.java (equals): Bug fix:
+	replaced BooleanType with OclAnyType.
+
+2001-03-08  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.204
+
+	* src/org/tzi/use/parser/Context.java (setModel): Don't set
+	models' filename here.
+
+	* src/org/tzi/use/gui/views/SequenceDiagram.java (update): Added
+	option for compact display.
+
+2001-03-06  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.203
+
+	* src/org/tzi/use/uml/ocl/expr/ExpStdOp.java: Keep Op_mkSet(),
+	Op_mkSequence(), and Op_mkBag() although they are only used by
+	test classes. The parser generates ExpXXXLiteral.
+
+	* src/org/tzi/use/parser/ASTCollectionLiteral.java (gen): Use
+	specialized expressions for mkSet, mkSequence, and mkBag.
+
+	* src/org/tzi/use/uml/ocl/value: Relax compareTo for values of
+	different types. Use string representation to compare.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpSequenceLiteral.java: New.
+	* src/org/tzi/use/uml/ocl/expr/ExpBagLiteral.java: New.
+	* src/org/tzi/use/uml/ocl/expr/ExpSetLiteral.java: New.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpCollectionLiteral.java:
+	New. Provides type inference.
+
+2001-03-05  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.202
+
+	* examples/MultipleInheritance.use: New.
+
+	* src/org/tzi/use/uml/ocl/type/Type.java (allSupertypes):
+	New. Implemented in all subclasses.
+
+	* src/org/tzi/use/uml/ocl/type/OclAnyType.java: New.
+
+	* src/org/tzi/use/uml/ocl/type/OclType.java: Removed unused class.
+
+	* src/org/tzi/use/parser/ASTTypeArgExpression.java (gen): Allow
+	shorthand only for non-collections.
+
+	* src/org/tzi/use/parser/ASTType.java (ASTType): Added OclAny.
+
+	* src/org/tzi/use/parser/use.g (typeExpression): Added
+	followsArrow to determine usage of shorthand notation.
+
+	* src/org/tzi/use/gui/main/MainWindow.java (addNewViewFrame): Use
+	Java 1.2 compatible code.
+	(ActionFilePrint.actionPerformed): Likewise.
+
+2001-03-04  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.201
+
+	* src/org/tzi/use/gui/main/MainWindow.java (ActionFilePrint): New
+	action. Added global print button for printable views.
+
+	* src/org/tzi/use/gui/views/NewObjectDiagram.java: Added option
+	for anti-aliasing.
+
+	* src/org/tzi/use/gui/views/PrintableView.java: New.
+
+	* src/org/tzi/use/uml/mm/MMPrintVisitor.java (visitOperation):
+	Added println at end.
+
+	* src/org/tzi/use/uml/sys/MCmdOpExit.java (getUSEcmd): Test for
+	optional result expression.
+	(name): Omit result expression.
+
+2001-03-03  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.200
+
+	* intern/www/qt.html.in: Updated. New screenshots.
+
+	* src/org/tzi/use/uml/mm/MModel.java: Keep filename of
+	specification.
+
+	* src/org/tzi/use/gui/views/SequenceDiagramView.java: Removed
+	scroll pane, since the view frame already provides one.
+
+	* src/org/tzi/use/config/Options.java: Added print properties, use
+	TypedProperties.
+
+	* src/org/tzi/use/util/TypedProperties.java: New class.
+
+	* src/org/tzi/use/gui/views/NewObjectDiagram.java (print): Added
+	print facility.
+
+	* src/org/tzi/use/gui/views/SequenceDiagram.java: Added print
+	facility.
+
+	* etc/use.properties: Added use.gui.print.diagramFont property.
+
+	* src/org/tzi/use/gui/main/MainWindow.java (sessionChanged): Show
+	name of spec file in window title.
+
+2001-03-01  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* intern/www/Makefile (%.html): Added -undef to cpp call.
+
+	* intern/www/prepost.html.in: Added screenshots.
+
+2001-02-28  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.199
+
+	* src/org/tzi/use/gui/main/MainWindow.java: Added new views.
+
+	* examples/Math.use: New.
+
+	* src/org/tzi/use/main/Shell.java (cmdInfoOpStack): Reverse
+	output. Print signature and actual call.
+
+	* src/org/tzi/use/gui/views/CommandView.java: New.
+
+	* src/org/tzi/use/gui/views/CallStackView.java: New.
+
+	* src/org/tzi/use/gui/views/ClassExtentView.java: Use
+	PopupListener from utils.
+
+	* src/org/tzi/use/gui/util/PopupListener.java: New.
+
+	* src: Removed a number of unnecessary imports.
+	
+	* src/org/tzi/use/gui/views/SequenceDiagramView.java: Moved
+	implementation to SequenceDiagram.java. Put sequence diagram into
+	scroll pane.
+
+	* src/org/tzi/use/gui/views/SequenceDiagram.java: New. Added popup
+	menu. Set preferred size.
+
+	* VERSION: 0.198
+
+	* use.prj: Bumped major version to 2.
+
+	* src/org/tzi/use/gui/views/SequenceDiagramView.java: Use Java2D,
+	added anti-aliasing, recursive messages, more clean-up.
+
+	* src/org/tzi/use/uml/sys/MOperationCall.java: Various new access
+	methods.
+
+2001-02-27  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.197
+
+	* examples/CallSequence.use: New.
+
+	* src/org/tzi/use/gui/views/SequenceDiagramView.java: New.
+
+	* src/org/tzi/use/gui/main/MainWindow.java (ActionStateEvalOCL):
+	Added to tool bar.
+	(ActionViewCreateSequenceDiagram): New.
+
+	* src/org/tzi/use/main/Shell.java (cmdStepOn): New command.
+
+2001-02-26  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.196
+
+	* src/org/tzi/use/parser/use.g (cmdStmt): Added opEnterCmd and
+	opExitCmd. Removed operationCall.
+
+	* src/org/tzi/use/parser/USECompiler.java (compileOperationCall):
+	Removed.
+
+	* src/org/tzi/use/uml/sys/MOperationCall.java (exit): Removed.
+
+	* examples/Makefile (test-cmd): New target. Added .cmd files for
+	all .use files.
+	(test): Added test-cmd.
+
+	* examples: Prefixed all openter/opexit commands with `!'.
+	* intern/www: Likewise.
+
+	* src/org/tzi/use/uml/sys/MCmdOpEnter.java: New class.
+	* src/org/tzi/use/uml/sys/MCmdOpExit.java: New class.
+
+	* src/org/tzi/use/main/Shell.java (cmdWrite): New command.
+	(cmdHelp): Added doc for `!' commands.
+	(cmdOpEnter): Removed.
+	(cmdOpExit): Removed.
+	
+	* src/org/tzi/use/gui/main/ObjectPropertiesDialog: Removed unused
+	class.
+
+	* src/org/tzi/use/uml/sys/cmd: Removed package. Moved classes up
+	one level: 
+
+2001-02-23  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.195
+
+	* src/org/tzi/use/parser/etc: Removed.
+
+	* src/org/tzi/use/gui/views/ClassExtentView.java (TableModel):
+	Moved icons outside inner class to fix compile error with javac.
+
+2001-02-21  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.194
+
+	* intern/www/prepost.html.in: Changed table width to 90%.
+	* intern/www/qt.html.in: 
+
+	* examples/Polygon.use: New.
+
+	* examples/actionsemantics.use: 
+	* examples/UML13All.use: Removed associations
+	AssociationRole_AssociationEndRole and
+	AssociationEndRole_ClassifierRole, adapted invariants. Fixes
+	bug0012.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpIterate.java (eval): Added
+	missing ctx.exit() call eventually causing a NullPointerException
+	in ExprEvalBrowser. Fixes bug0011.
+
+	* src/org/tzi/use/main/Main.java (main): Close spec file after
+	compilation.
+	* src/org/tzi/use/gui/main/MainWindow.java (compile): Likewise.
+	* src/org/tzi/use/main/Shell.java (cmdOpen): Likewise.
+
+2001-02-19  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.193
+
+	* examples/NestedOperationCalls.use: New.
+
+	* src/org/tzi/use/uml/sys/MSystem.java (exitOperation): Fixed
+	output bug.
+
+	* examples/Graph.use: New.
+
+	* examples/*.cmd: Removed all `;'.
+
+	* examples/actionsemantics_group.cmd: Renamed.
+
+	* examples/RecursiveOperations.use: Renamed.
+	* examples/RecursiveOperations.cmd: 
+
+	* src/org/tzi/use/uml/ocl/expr/ExpStdOp.java (Op_oclIsNew): New
+	operation.
+	(OpGeneric.eval): Added EvalContext.
+
+	* src/org/tzi/use/parser/ASTIdExpression.java: Removed.
+
+	* intern/www/qt.html.in: Set table width. 
+
+	* intern/www/prepost.html.in: Set table width. Added some doc.
+	Added Graph example.
+	Added NestedOperationCalls example.
+	Added table of contents.
+
+2001-02-18  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.192
+
+	* src/org/tzi/use/uml/sys/MSystem.java (enterOperation): Use
+	PrintWriter for output.
+	(exitOperation): Likewise.
+	(enterOperation): Push operation on stack only if preconditions
+	ok.
+	(callStack): New.
+
+	* intern/www/qt.html.in: New layout.
+
+	* intern/www/prepost.html.in: Completed.
+
+	* intern/www/index.html.in: Added link to prepost.html.
+
+	* src/org/tzi/use/gui/views/NewObjectDiagram.java (draw): Moved
+	link name a bit higher.
+
+	* src/org/tzi/use/main/Shell.java (cmdInfoOpStack): New.
+	(cmdHelp): Added doc for openter, opexit, and info opstack.
+
+2001-02-17  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.191
+
+	* intern/www/cls-Employee.fig: New.
+	* intern/www/use2html.pl: New.
+
+	* intern/www/prepost.html.in: New. Started docs for
+	pre-/postconditions.
+
+	* VERSION: 0.190
+
+	* src/org/tzi/use/parser: Removed handwritten parser and scanner.
+
+	* src/org/tzi/use/parser/USECompiler.java (compileExpression2):
+	Removed.
+
+	* VERSION: 0.189
+
+	* src/org/tzi/use/uml/ocl/expr/ExpAllInstances.java (eval): Consider pre
+	modifier.
+
+	* src/org/tzi/use/uml/ocl/value/VarBindings.java (add): New.
+
+	* src/org/tzi/use/main/Shell.java (cmdOpExit): Accept result
+	expression.
+
+	* src/org/tzi/use/main/Shell.java (cmdQuery): 
+	(cmdInfoVars): 
+	(cmdOpEnter): 
+	* src/org/tzi/use/parser/USECompiler.java (compileCmdList): 
+	* src/org/tzi/use/gui/main/EvalOCLDialog.java (evaluate): 
+	* src/org/tzi/use/uml/sys/cmd/MCmdInsertLink.java (execute):
+	* src/org/tzi/use/uml/sys/cmd/MCmdSetAttribute.java (execute): 
+	* src/org/tzi/use/uml/sys/cmd/MCmdDeleteLink.java (execute): Use
+	topLevelBindings.
+
+	* src/org/tzi/use/uml/sys/cmd/MCmdDestroyObjects.java: 
+	* src/org/tzi/use/uml/sys/cmd/MCmdCreateObjects.java: Use
+	varBindings from MSystem.
+
+	* src/org/tzi/use/uml/sys/MSystemState.java: Removed varBindings.
+	(system): New.
+
+	* src/org/tzi/use/uml/sys/MSystem.java: Moved varBindings from
+	MSystemState.
+	(varBindings): New.
+	(topLevelBindings): New.
+	(exitOperation): Bind result variable.
+
+	* src/org/tzi/use/uml/sys/MOperationCall.java (enter): Use
+	top-level bindings for evaluation of target and args.
+
+	* VERSION: 0.188
+
+	* src/org/tzi/use/uml/ocl/expr/ExpAttrOp.java (eval): Consider pre
+	modifier.
+	* src/org/tzi/use/uml/ocl/expr/ExpNavigation.java (eval): Ditto.
+	* src/org/tzi/use/uml/ocl/expr/ExpObjOp.java (eval): Ditto.
+
+	* src/org/tzi/use/uml/ocl/expr/Evaluator.java (eval): Accept
+	prestate.
+
+	* src/org/tzi/use/uml/ocl/expr/EvalContext.java: Added prestate.
+	(preState): New.
+
+	* src/org/tzi/use/uml/sys/MSystem.java (exitOperation): Use both
+	states to postcondition evaluation.
+	(enterOperation): Eval in scope local to operation.
+
+	* src/org/tzi/use/uml/sys/MOperationCall.java (enter): Keep
+	bindings local.
+	(varBindings): New.
+	(preState): New.
+
+	* examples/Employee.use: Added operations and pre-/postconditions.
+
+	* src/org/tzi/use/uml/mm/MMPrintVisitor.java: Removed ";" in output.
+
+2001-02-16  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.187
+
+	* src/org/tzi/use/uml/sys/MOperationCall.java: New.
+
+	* src/org/tzi/use/main/Shell.java (cmdOpExit): New.
+	(cmdOpEnter): Implemented.
+	
+	* src/org/tzi/use/parser/USECompiler.java (compileOperationCall):
+	Generate MOperationCall.
+
+	* src/org/tzi/use/parser/ASTOperationCall.java (gen): Generate
+	MOperationCall. Check operation params.
+
+	* src/org/tzi/use/uml/sys/MSystemState.java: Added fName.
+	(MSystemState): Added copy constructor.
+
+	* src/org/tzi/use/uml/sys/MSystem.java: Added operation call
+	stack.
+	
+	* src/org/tzi/use/uml/sys/MObjectState.java (MObjectState): Added
+	copy constructor.
+
+	* src/org/tzi/use/uml/sys/MLinkSet.java (MLinkSet): Added copy
+	constructor.
+
+	* src/org/tzi/use/util/HashMultiMap_test.java: New.
+
+	* src/org/tzi/use/util/MultiMap.java (putAll): New.
+
+	* src/org/tzi/use/util/HashMultiMap.java (putAll): New.
+	(equals): Implemented.
+	(hashCode): Implemented.
+
+	* VERSION: 0.186
+
+	* src/org/tzi/use/main/Shell.java (cmdOpEnter): New.
+	
+	* src/org/tzi/use/parser/USECompiler.java (compileOperationCall):
+	New.
+
+	* src/org/tzi/use/uml/sys/MSystem.java (enterOperation): New.
+	(exitOperation): New.
+
+2001-02-15  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* src/org/tzi/use/parser/ASTOperationCall.java: New class.
+
+	* src/org/tzi/use/parser/use.g (operationCall): New rule for
+	`openter' command.
+
+	* Most Makefiles: Changes for gcj.
+
+	* src/org/tzi/use/uml/ocl/expr/EvalContext.java: Added pre state.
+
+	* src/org/tzi/use/uml/mm/MOperation.java: Keep list of
+	pre-/postconditions.
+
+	* src/org/tzi/use/uml/mm/MModel.java (addPrePostCondition): Also
+	store conditions in operation.
+
+2001-02-14  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.185
+
+	* etc/use.el (use-generic-mode): Improved regexps.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpUndefined.java (ExpUndefined):
+	Bug fix: removed fSourceType.
+
+	* src/org/tzi/use/parser/ASTInvariantClause.java: Renamed from
+	ASTClassInvariant.java.
+
+	* src/org/tzi/use/parser/ASTOperation.java (genFinal): Added
+	prePostClauses.
+
+	* src/org/tzi/use/parser/use.g (operationDefinition): Added
+	sequence of prePostClauses.
+
+	* VERSION: 0.184
+
+	* Removed all optional semicolons in *.use files.
+
+	* src/org/tzi/use/parser/use.g (enumTypeDefinition): Made trailing
+	SEMI optional.
+	(attributeDefinition): ditto.
+	(operationDefinition): ditto.
+	(associationEnd): ditto.
+
+2001-02-13  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.183
+
+	* src/org/tzi/use/parser/Context.java (setInsidePostCondition): New.
+	(insidePostCondition): New.
+
+	* src/org/tzi/use/parser/ASTOperationExpression.java (gen): Split
+	into two methods. Added @pre handling.
+
+	* src/org/tzi/use/uml/ocl/expr/Expression.java: Added @pre flag.
+	(isPre): New.
+	(setIsPre): New.
+	(atPre): New.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpVariable.java (toString): 
+	* src/org/tzi/use/uml/ocl/expr/ExpStdOp.java (toString): 
+	* src/org/tzi/use/uml/ocl/expr/ExpObjOp.java (toString): 
+	* src/org/tzi/use/uml/ocl/expr/ExpNavigation.java (toString): 
+	* src/org/tzi/use/uml/ocl/expr/ExpAttrOp.java (toString): 
+	* src/org/tzi/use/uml/ocl/expr/ExpAllInstances.java (toString):
+	Added @pre.
+
+	* src/org/tzi/use/parser/test/actionsemantics.use (class
+	ExecutionSnapshot): Renamed pre and post operation.
+
+	* src/org/tzi/use/parser/use.g (operationExpression): Added @pre
+	modifier.
+	(model): Added pre/postconditions as constraints.
+	(invariant): New constraint rules.
+	(invariantClause): ditto.
+	(prePost): ditto.
+	(prePostClause): ditto.
+
+	* src/org/tzi/use/parser/ASTModel.java: Support for
+	pre-/postconditions.
+
+	* src/org/tzi/use/uml/mm/ModelFactory.java
+	(createPrePostCondition): New.
+
+	* src/org/tzi/use/uml/mm/MOperation.java: Added owner class.
+
+	* src/org/tzi/use/uml/mm/MModel.java: Support for
+	pre-/postconditions.
+
+	* src/org/tzi/use/uml/mm/MMVisitor.java (visitPrePostCondition): New.
+
+	* src/org/tzi/use/uml/mm/MMPrintVisitor.java (visitPrePostCondition): New.
+
+	* src/org/tzi/use/gui/main/ModelBrowser.java (createNodes): Added
+	top node for pre-/postconditions. Renamed `Constraints' to
+	`Invariants'.
+
+2001-02-12  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* src/org/tzi/use/parser/use.g (operationExpression): Added
+	`@pre'.
+
+	* VERSION: 0.182
+
+	* src/org/tzi/use/parser/use.g (REAL): Updated to OCL 1.4.
+	(RANGE_OR_INT): New predicate for real literals with exponent.
+
+	* intern/www/Makefile (install): Copy too.
+
+2001-02-11  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.181
+
+	* src/org/tzi/use/parser/use.g (postfixExpression): Use
+	propertyCall.
+	(primaryExpression): Use propertyCall, removed ASTIdExpression.
+	(propertyCall): New, OCL 1.4.
+	(operationExpression): Renamed from generalOperation.
+	(IDENT): Removed '$' from allowed character sets.
+
+	* src/org/tzi/use/parser/ASTQueryExpression.java (gen): Generate
+	implicit element variable as context if not explicitly given.
+
+	* src/org/tzi/use/parser/ASTClassInvariant.java (gen): 
+	* src/org/tzi/use/parser/ASTClass.java
+	(genConstraintsAndOperationBodies): Add self as variable and as
+	default context.
+
+	* test/README: Explain file format of *.in files. Removed text in
+	t1-5.in.
+
+	* intern/www/index.html.in: More help on release format.
+
+	* src/org/tzi/use/parser/ASTEnumTypeDefinition.java (gen): Add
+	to global type table.
+
+2001-02-09  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* src/org/tzi/use/parser/use.g (operationExpression): Renamed from
+	generalOperation.
+
+2001-02-05  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.180
+
+	* test/t1.in: Example for flattening with nested iterate.
+
+	* src/org/tzi/use/uml/ocl/expr/EvalContext.java (varBindings): New.
+
+	* src/org/tzi/use/uml/ocl/value/VarBindings.java (toString): New.
+
+2001-01-14  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.179
+
+	* src/org/tzi/use/parser/USECompiler.java (compileExpression2):
+	Interface to new parser.
+
+	* src/org/tzi/use/parser/USECompiler_test1.java (doTests): Use
+	USECompiler.compileExpression for parsing.
+
+	* src/org/tzi/use/parser/ASTCollectionLiteral.java: Updated to OCL
+	1.4 grammar.
+
+	* src/org/tzi/use/parser/use.g (collectionLiteral): Updated to OCL
+	1.4 grammar.
+	(collectionItem): New.
+
+	* src/org/tzi/use/uml/ocl/value/SetValue.java (SetValue): Accept multiple ranges.
+	* src/org/tzi/use/uml/ocl/value/SequenceValue.java (SequenceValue): ditto.
+	* src/org/tzi/use/uml/ocl/value/BagValue.java (BagValue): ditto.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpStdOp.java (Op_mkSetRange):
+	Accept multiple ranges.
+	(Op_mkSequenceRange): ditto.
+	(Op_mkBagRange): ditto.
+
+	* VERSION: 0.178
+
+	* src/org/tzi/use/parser/ChangesInNewParser: Started work on new parser.
+	* src/org/tzi/use/parser/Reporter.java: ditto.
+	* src/org/tzi/use/parser/ScannerException.java: ditto.
+	* src/org/tzi/use/parser/Token.java: ditto.
+	* src/org/tzi/use/parser/USEParser.java: ditto.
+	* src/org/tzi/use/parser/USEParser_test.java: ditto.
+	* src/org/tzi/use/parser/USEScanner.java: ditto.
+	* src/org/tzi/use/parser/USEScanner_test.java: ditto.
+
+2001-01-10  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.177
+
+	* src/org/tzi/use/uml/sys/MSystemState.java (check): Output
+	invariant name as "class::inv".
+
+	* src/org/tzi/use/uml/mm/MMInstanceGenerator.java (visitClassInvariant):
+	Prefix invariant name with class name.
+	(genInstance): Improved.
+
+	* src/org/tzi/use/uml/mm/MModel.java (addClassInvariant): Use
+	class as scope for invariant name.
+
+	* VERSION: 0.176
+
+	* src/org/tzi/use/uml/ocl/expr/ExpAny.java: New.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpOne.java: New.
+
+	* src/org/tzi/use/parser/ASTQueryExpression.java: Added cases for
+	Q_ANY, Q_ONE.
+
+	* src/org/tzi/use/parser/use.g: Added Q_ANY, Q_ONE.
+
+2001-01-09  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.175
+
+	* Version 1.5.0 released.
+
+	* VERSION: 0.174
+
+	* Preparing 1.5.0 release.
+
+2001-01-07  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.173
+
+	* Updated copyright date to 2001 in all source files
+
+	* VERSION: 0.172
+
+	* examples/Grammar.use: New.
+	* examples/Grammar.cmd: New.
+	* examples/Grammar.fig: New.
+	* examples/Grammar.png: New.
+	* examples/Grammar.eps: New.
+
+2000-12-30  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.171
+
+	* src/org/tzi/use/uml/ocl/value/OclTypeValue.java: Removed.
+
+	* src/org/tzi/use/uml/ocl/value/IntegerValue.java (compareTo):
+	Handle UndefinedValue argument. Check early for comparison with `this'.
+	* src/org/tzi/use/uml/ocl/value/RealValue.java (compareTo): Likewise.
+	* src/org/tzi/use/uml/ocl/value/BagValue.java (compareTo): Likewise.
+	* src/org/tzi/use/uml/ocl/value/StringValue.java (compareTo): Likewise.
+	* src/org/tzi/use/uml/ocl/value/SetValue.java (compareTo): Likewise.
+	* src/org/tzi/use/uml/ocl/value/SequenceValue.java (compareTo): Likewise.
+	* src/org/tzi/use/uml/ocl/value/ObjectValue.java (compareTo): Likewise.
+	* src/org/tzi/use/uml/ocl/value/EnumValue.java (compareTo): Likewise.
+	* src/org/tzi/use/uml/ocl/value/BooleanValue.java (compareTo): Likewise.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpStdOp.java (Op_string_less): New.
+	(Op_string_greater): New.
+	(Op_string_lessequal): New.
+	(Op_string_greaterequal): New.
+
+	* src/org/tzi/use/uml/ocl/value/UndefinedValue.java (compareTo):
+	Return 0 only if o also is an UndefinedValue.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpSortedBy.java: New.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpQuery.java (evalSortedBy): New.
+
+2000-12-29  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* src/org/tzi/use/parser/use.g (queryExpression): Changed literals
+	into identifiers to avoid excessive keyword usage. Added
+	sortedBy.
+	(isQueryIdent): Test for query expression identifier.
+	(postfixExpression): Added semantic predicate isQueryIdent.
+
+	* src/org/tzi/use/parser/ASTQueryExpression.java (gen): Added
+	sortedBy. Use literals now defined in GParser.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpQuery.java (evalCollect): Return
+	sequence if range is sequence.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpCollect.java (ExpCollect):
+	Handle sequences.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpStdOp.java (Op_set_asSequence): New.
+	(Op_bag_asSequence): New.
+	(Op_collection_includesAll): Fixed type matching. Argument can be
+	any collection type with element type T.
+	(Op_collection_excludesAll): Likewise.
+
+	* src/org/tzi/use/uml/ocl/value/BagValue.java (asSequence): New.
+
+	* src/org/tzi/use/uml/ocl/value/SetValue.java (asSequence): New.
+
+	* VERSION: 0.170
+
+2000-12-21  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* src/org/tzi/use/uml/sys/cmd/MCmdSetAttribute.java (execute):
+	Pass global varBindings of systemState to eval.
+
+	* src/org/tzi/use/parser/USECompiler.java (compileCmdList): Take
+	varBindings from systemState.
+
+2000-12-20  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* src/org/tzi/use/gui/views/NewObjectDiagram.java
+	(insertLinkBetweenSelectedObjects): Removed unused method.
+
+2000-12-19  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.169
+
+	* src/org/tzi/use/gui/views/ClassExtentView.java: Reworked.
+
+	* src/org/tzi/use/gui/main/AboutDialog.java: Updated copyright
+	date.
+
+	* src/org/tzi/use/uml/sys/StateChangeEvent.java
+	(addModifiedObject): New.
+
+	* src/org/tzi/use/uml/sys/cmd/MCmdSetAttribute.java (getChanges):
+	Implemented.
+
+	* src/org/tzi/use/uml/mm/MModel.java (classInvariants): New.
+	(allClassInvariants): New.
+
+2000-12-18  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.168
+
+	* src/org/tzi/use/gui/views/ClassExtentView.java: New. Needs more
+	work.
+
+	* src/org/tzi/use/gui/main/MainWindow.java
+	(ActionViewCreateClassExtent): New view.
+
+	* src/org/tzi/use/config/Options.java (processArgs): Updated
+	copyright date.
+
+2000-12-17  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.167
+
+	* src/org/tzi/use/uml/ocl/value/CollectionValue.java (collection):
+	Made public.
+
+	* src/org/tzi/use/uml/mm/MClassInvariant.java
+	(getExpressionForSatisfyingInstances): New.
+
+	* src/org/tzi/use/gui/views/ClassInvariantDetailsDialog.java:
+	New. Needs more work.
+
+	* src/org/tzi/use/gui/views/NewObjectDiagram.java (autoLayout):
+	Skip creation of layouter when window size is zero.
+
+2000-12-14  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.166
+
+	* test/t1.in: Added test cases for isUnique.
+
+	* src/org/tzi/use/parser/use.g (queryExpression): Added
+	isUnique to rule.
+
+	* src/org/tzi/use/parser/ASTQueryExpression.java (gen): Added
+	isUnique.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpQuery.java (evalIsUnique): New.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpIsUnique.java: New.
+
+2000-12-13  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.165
+
+	* src/org/tzi/use/gui/views/NewObjectDiagram.java (addObject):
+	Place new nodes randomly.
+	(paintComponent): Synchronized. Might fix co-modification
+	exceptions.
+
+	* VERSION: 0.164
+
+	* src/org/tzi/use/gui/main/EvalOCLDialog.java: Added Clear button.
+	(evaluate): Keep new caret position within limits. Caused
+	exception on empty input.
+
+	* VERSION: 0.163
+
+	* src/org/tzi/use/uml/ocl/expr/ExpIf.java (eval): Changed
+	semantics: undefined condition implies undefined result.
+
+	* src/org/tzi/use/parser/test: Added more links to examples/*.use.
+
+	* src/org/tzi/use/parser/test/t10.use: Test case for bug0010.
+
+	* src/org/tzi/use/parser/ASTOperation.java (genFinal): Check for
+	fOperation == null. Fixes bug0010.
+
+2000-12-05  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.162
+
+	* src/org/tzi/use/uml/sys/MSystemState.java
+	(binaryAssociationsAreValid): Better error message.
+
+	* examples/Lists.use: New.
+
+	* VERSION: 0.161
+
+	* Preparing release 1.4.0.
+
+2000-12-04  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.160
+
+	* Added t5.in, t5.use, bug0008 to project.
+
+	* VERSION: 0.159
+
+	* src/org/tzi/use/uml/mm/MMInstanceGenerator.java (visitModel):
+	Don't generate datatypes for which a class exists.
+	(visitAttribute): Use datatype or class for Classifier_Feature
+	link.
+
+	* examples/UML13All.use: Fixed rolename conflicts in UML
+	metamodel. Found due to change in MModel.java below.
+
+	* examples/actionsemantics.use: Keep in sync with UML13All.use.
+
+	* src/org/tzi/use/uml/mm/MModel.java (addAssociation): Check for
+	rolename conflicts.
+
+	* src/org/tzi/use/uml/mm/MClass.java (navigableEnds): New method.
+
+	* examples/Makefile (test-mm): New target for testing metamodel
+	instantiations.
+
+	* test/t5.in: New test case for bug0008.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpObjOp.java (eval): Evaluate all
+	arguments in the caller's scope. Fixes bug0008.
+
+2000-12-03  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.158
+
+	* src/org/tzi/use/gui/views/NewObjectDiagram.java: Optionally draw
+	attribute values.
+
+	* src/org/tzi/use/gui/views/ObjectDiagram.java: Removed.
+	* src/org/tzi/use/gui/views/ObjectDiagramView.java: Removed.
+	* src/org/tzi/use/gui/views/SystemStateView.java: Removed.
+
+	* VERSION: 0.157
+
+	* src/org/tzi/use/gui/views/NewObjectDiagram.java: Added actions
+	for loading/saving layout to/from a file.
+
+	* VERSION: 0.156
+
+	* test/t1.in: Added tests for (un-)definedness.
+
+2000-12-01  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* src/org/tzi/use/uml/ocl/expr/ExpStdOp.java: Fixed body of
+	Op_isDefined.eval() (accidentally copied from Op_notequal in
+	0.153?).
+
+2000-11-28  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.155
+
+	* src/org/tzi/use/parser/ASTTypeArgExpression.java: Combine
+	oclIsTypeOf, oclIsKindOf and oclAsType. Accept shorthand notation
+	for collect. Fixes bug0007.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpAsType.java (eval): Implemented
+	missing cases for equal types and Integer-to-Real upcast.
+
+	* src/org/tzi/use/parser/use.g (typeExpression): Generalized to
+	produce an ASTTypeArgExpression.
+
+	* src/org/tzi/use/parser/ASTQueryExpression.java: Use switch
+	statement instead of nested if.
+
+2000-11-23  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.154
+
+	* test/t1.in: New test cases for equality.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpStdOp.java: Removed all special
+	equal and notequal operations. Added generic Op_equal and
+	Op_notequal. Fixes bugs related to undefined values.
+
+	* src/org/tzi/use/uml/ocl/value/SequenceValue.java (equals): 
+	* src/org/tzi/use/uml/ocl/value/BagValue.java (equals): 
+	* src/org/tzi/use/uml/ocl/value/SetValue.java (equals): Only
+	the argument's type must be a subtype of this.
+
+	* src/org/tzi/use/uml/ocl/value/IntegerValue.java (compareTo):
+	Accept RealValues.
+
+	* src/org/tzi/use/uml/ocl/value/RealValue.java (equals): Accept
+	IntegerValues.
+
+	* VERSION: 0.153
+
+	* Makefile.inc: Changes for playing with gcj.
+
+	* VERSION: 0.152
+
+	* src/org/tzi/use/main/ModelToGraph.java: Improved.
+
+	* examples/Makefile (vcg): New target.
+	
+2000-11-20  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.151
+
+	* src/org/tzi/use/main/ModelToGraph.java: Write VCG graph file of
+	model.
+
+	* src/org/tzi/use/main/Shell.java (cmdCheck): Changed
+	syntax. Added `-d' and list of invariants.
+
+	* src/org/tzi/use/uml/mm/MClassInvariant.java
+	(getExpressionForViolatingInstances): New method.
+
+	* src/org/tzi/use/uml/sys/MSystemState.java (check): Allow list of
+	invariants to be checked. Show instances violating an invariant.
+
+	* VERSION: 0.150
+
+	* src/org/tzi/use/parser/ASTOperation.java (genSignature): Bug
+	fix: use hack only if we actually have an expression.
+
+	* examples/actionsemantics.use: Updated to current version of USE
+	syntax and UML13All.use.
+
+	* VERSION: 0.149
+
+	* examples/groupactionexample.cmd: 
+	* examples/actionsemantics.use: Contributed by Jose Alvarez and
+	Andy Evans (University of York, UK).
+
+	* examples/UML13All.use: Untabified.
+
+	* src/org/tzi/use/parser/ASTOperation.java (genFinal): Bug fix:
+	moved hack to genSignature to deal with forward references.
+
+	* Makefile: Added prcs_tree target.
+
+	* VERSION: 0.148
+
+	* Merged in changes from 1.3.0 release.
+
+	* VERSION: 0.147
+
+	* Preparing release 1.3.0.
+
+2000-11-19  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.146
+
+	* Makefile (doc): New target. Fixes bug about missing README file.
+
+	* VERSION: 0.145
+
+	* src/org/tzi/use/main/Shell.java (processLine): Added command
+	`readq'.
+
+	* VERSION: 0.144
+
+	* src/org/tzi/use/parser/ASTOperationExpression.java: Completed
+	collect shorthand.
+
+	* src/org/tzi/use/config/Options.java: Added option
+	`disableCollectShorthand'.
+
+2000-11-18  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.143
+
+	* test/t4.in: More testcase for collect shorthand.
+
+	* src/org/tzi/use/parser/ASTOperationExpression.java: Various
+	changes for collect shorthand (not yet complete).
+
+	* src/org/tzi/use/uml/ocl/expr/ExpObjOp.java (ExpObjOp): Removed
+	objExp. Now first element of args.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpStdOp.java (matches): Use only
+	types instead of expressions.
+	(exists): New method. Just test for existence of operation.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpAttrOp.java (ExpAttrOp): Throw
+	IllegalArgumentException instead of ExpInvalidException.
+
+2000-11-16  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.142
+
+	* src/org/tzi/use/parser/ASTEnumLiteral.java (gen): Bug fix: check
+	for undefined literal, otherwise causing a
+	NullPointerException. Added test case t7.use in parser/test.
+
+2000-11-04  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.141
+
+	* src/org/tzi/use/parser/use.g (GLexer): Use defaultErrorHandler.
+
+	* src/org/tzi/use/parser/test_spec.use: Added for specification
+	test cases.
+
+	* src/org/tzi/use/parser/USECompiler_test2.java: New test for
+	whole specifications.
+
+	* src/org/tzi/use/parser/USECompiler.java: Adapted to new antlr
+	exceptions.
+
+	* src/org/tzi/use/parser/MyLexer.java (consume): Scanner now keeps
+	track of columns.
+	(reportError): Continue on errors but count them.
+
+	* README.in: Added section `Copying'.
+
+	* COPYING.ANTLR: New file.
+
+	* VERSION: 0.140
+
+	* src/antlr: Updated to antlr-2.7.1. USE-parser still needs
+	update.
+
+	* VERSION: 0.139
+
+	* src/antlr: Changed all antlr files from DOS to Unix format.
+
+2000-11-02  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.138
+
+	* Preparing 1.2.0 release.
+
+2000-11-01  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.137
+
+	* intern/www/index.html.in: Added links to old releases. Updated
+	bibliography.
+
+	* test/t4.in: Added more test cases (still commented out) for
+	collect shorthand to be implemented.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpStdOp.java (name): New operation
+	Op_number_unaryplus.
+
+	* src/org/tzi/use/parser/use.g (unaryExpression): Added unary "+".
+
+2000-10-31  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.136
+
+	* src/org/tzi/use/parser/ASTOperationExpression.java
+	(gen): Rewritten using a full case analysis.
+
+	* VERSION: 0.135
+
+	* etc/use.el (use-generic-mode): Added font-locking for string
+	constants.
+
+	* examples/UML13All.use: Modified all E0.2 expressions to use the
+	shorthand for navigation over associations with multiplicity zero
+	or one.
+
+	* src/org/tzi/use/parser/ASTOperationExpression.java (gen): Ignore
+	parentheses for case (6). Arguments weren't passed on in (6).
+
+	* src/org/tzi/use/uml/mm/MClassInvariant.java: Bug fix: use
+	variable name instead of "self" if variable is given explicitely.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpObjAsSet.java: Renamed.
+	(toString): Return fObjExp.
+
+	* VERSION: 0.134
+
+	* src/org/tzi/use/parser/ASTAssociationEnd.java (gen): Add warning
+	about useless `ordered' keyword for association end targeting only
+	single objects.
+
+2000-10-30  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* src/org/tzi/use/parser/ASTOperationExpression.java (gen): Added
+	shorthand for navigation over associations with multiplicity zero
+	or one.
+
+	* test/t3.in: New test case for navigation over associations with
+	multiplicity zero or one.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpObjAsCollection.java: New class.
+
+	* src/org/tzi/use/parser/use.g (generalOperation): The inherited
+	attribute followsDot indicates whether a dot or an arrow prefixes
+	the operation name.
+
+	* src/org/tzi/use/uml/ocl/expr/Evaluator.java (evalList): Use
+	separate thread even when numThreads == 1 to deliver results
+	immediately when they become available.
+
+	* README.OCL: Better explanation of collect shorthand.
+
+	* examples/Makefile (%-mm.cmd): Don't use backslash escaped
+	newline because interpretation depends on system version of echo
+	command.
+
+2000-10-28  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.133
+
+	* src/org/tzi/use/gui/views/ClassInvariantView.java (update): Modified to
+	use parallel evaluation of invariants.
+	(update): Added a progress bar.
+
+	* README.OCL: Added section extensions.
+
+	* VERSION: 0.132
+
+	* src/org/tzi/use/parser/ASTIterateExpression.java: fIterateToken
+	was not set in constructor causing a NullPointerException when a
+	SemanticException is created. Fixes bug0004.
+
+	* src/org/tzi/use/main/Shell.java (cmdQuery): Missing call to
+	enableEvalTree() caused NullPointerException in
+	ExprEvalBrowser. Fixes bug0005.
+
+	* src/org/tzi/use/uml/ocl/expr/EvalContext.java: Changed all
+	methods previously being public to package scope.
+
+	* VERSION: 0.131
+
+	* etc/use.properties: New property `use.eval.numthreads'.
+
+	* src/org/tzi/use/main/DaVinciProcess.java: Changed fIn to
+	BufferedReader since readLine has been deprecated on
+	DataInputStream.
+
+	* src/org/tzi/use/config/Options.java: Added property
+	EVAL_NUMTHREADS.
+
+	* src/org/tzi/use/uml/sys/MSystemState.java (check): Modified to
+	use parallel evaluation of invariants.
+
+	* src/org/tzi/use/uml/ocl/expr/Evaluator.java (evalList): New
+	method vor threaded evaluation.
+
+	* src/org/tzi/use/util/TestEnv.java (test): Handle null values
+	correctly.
+
+2000-10-26  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.130
+
+	* src/org/tzi/use/uml/ocl/expr/Expression.java (eval): Removed
+	throw clause for ExpEvalException. Changed all dependent code
+	accordingly.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpEvalException: Removed.
+
+2000-10-25  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.129
+
+	* etc/use.el (use-generic-mode): Added pre and post keywords.
+
+	* test/t2.use: Added recursion test case.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpUndefined.java (toString): Fixed
+	expression syntax.
+
+	* src/org/tzi/use/parser/ASTOperationExpression.java
+	(genObjOperation): Additionally check for correct operation
+	(isQuery and OCL).
+
+	* src/org/tzi/use/parser/use.g (operationDefinition): Make type
+	and expression optional.
+
+	* src/org/tzi/use/parser/ASTOperation.java: Reflect change in
+	grammar.
+
+	* src/org/tzi/use/uml/mm/MOperation.java: Make return type and
+	expression body optional.
+
+	* src/org/tzi/use/uml/mm/MMPrintVisitor.java (visitOperation):
+	Deal with operations without return type and expression body.
+
+2000-10-22  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.128
+
+	* src: Removed all unnecessary import declarations.
+
+2000-10-19  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* src/org/tzi/use/uml/sys/MSystemState.java:
+	* src/org/tzi/use/util/StringUtil_test.java: Changed some string
+	literals jikes-1.12 was complaining about.
+
+2000-10-18  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* test/state/Makefile ($(BAD_DONE_FILES)): Don't depend on bash.
+
+	* src/org/tzi/use/uml/ocl/value/RealValue.java (compareTo): Fixed
+	conversion bug where values with difference less than 1 were
+	considered equal.
+
+2000-10-17  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.127
+
+	* src/org/tzi/use/graph/layout/LayeredLayout.java (layout):
+	Initialize t1 - t5. Otherwise compilation fails with javac (but
+	only in jdk1.2, not jdk1.3?!). Fixes bug0003.
+
+	* Makefile (all): Don't depend on README. Dependency moved to dist
+	target. Fixes bug0002.
+
+2000-10-11  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.126
+
+	* src/org/tzi/use/uml/sys/MSystemState.java
+	(naryAssociationsAreValid): Added.
+
+	* src/org/tzi/use/util/StringUtil.java (escapeChar): New.
+	(escapeString): New.
+
+	* src/org/tzi/use/uml/mm/MMInstanceGenerator.java
+	(visitClassInvariant): Take care of special characters in
+	expressions needing escaping.
+
+	* src/org/tzi/use/parser/use.g (STRING): Added support for escape
+	sequences. Dropped double quotes.
+
+2000-10-09  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.125
+
+	* test/state: New test suite for checking system states (needs
+	more work).
+	
+	* src/org/tzi/use/parser/ASTClass.java
+	(genAttributesOperationSignaturesAndGenSpec): Fixed bug0001.
+
+	* src/org/tzi/use/main/Shell.java: Implement `-q' option.
+
+	* src/org/tzi/use/main/Main.java (main): Return result of
+	constraint check as exit code if `-q' was specified.
+
+	* src/org/tzi/use/parser/ASTInsertCmd.java (gen): Check for
+	matching size.
+
+	* src/org/tzi/use/config/Options.java: Added options `-q' and
+	`-qv'. Changed SpecFilename, CmdFilename and DiagramFilename to
+	lower-case.
+
+
+2000-09-28  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* src/org/tzi/use/parser/use.g (collectionType): Added
+	"Collection".
+
+2000-09-27  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.124
+
+	* Released 1.1.0.
+
+2000-09-26  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.123
+
+	* src/org/tzi/use/gui/views/ClassInvariantView.java
+	(ClassInvariantView): Explicitly enable eval tree building.
+
+2000-09-06  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* src/org/tzi/use/uml/ocl/expr/EvalNode.java: Defer creation of
+	children list.
+
+2000-09-05  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.122
+
+	* src/org/tzi/use/uml/mm/MMInstanceGenerator.java
+	(visitGeneralization): Implemented.
+	(visitClassInvariant): Implemented.
+
+	* src/org/tzi/use/util/TextWritable: Removed.
+
+	* src/org/tzi/use/util/TextWriter: Removed.
+
+	* examples/UML13All.use: UML metamodel violates well-formedness
+	rule Classifier3 for associations between State/Action,
+	Message/ClassifierRole, Stimulus/Instance, Message/Message,
+	UseCase/Include, UseCase/Extend. Fixed by adding different role
+	names.
+	(Collaboration_Classifier): Fixed wrong association end.
+	(inv AttributeLink1): Fixed missing number.
+
+	* src/org/tzi/use/gui/main/MainWindow.java (checkStructure):
+	Suppress first message.
+	(MainWindow): Set mnemonics for all menu items.
+	(MainWindow): Added checkbox menu item for turning off automatic
+	structure checking.
+
+2000-09-04  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.121
+
+	* src/org/tzi/use/uml/ocl/expr/ExpStdOp.java (BooleanOperation):
+	Behavior wrt undefined values now conforms to Amsterdam Manifesto.
+
+	* src/org/tzi/use/parser/use.g (undefinedLiteral): New
+	rule. `oclEmpty(type)' produces undefined value of given type.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpUndefined.java: New class.
+
+2000-09-03  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.120
+
+	* src/org/tzi/use/uml/ocl/expr/ExpStdOp.java (eval): Enable
+	short-circuit evaluation of boolean operations.
+	(Op_boolean_or): Short-circuit evaluation.
+	(Op_boolean_and): Likewise.
+
+	* src/org/tzi/use/gui/main/MainWindow.java (ActionStateReset): New
+	command.
+
+	* src/org/tzi/use/uml/sys/MSystem.java (reset): New method.
+
+	* examples/Makefile: Added rule for metamodel command files.
+
+	* src/org/tzi/use/util/Report.java (addRuler): New feature.
+
+	* src/org/tzi/use/main/Shell.java (cmdInfoState): Completed
+	report.
+	(cmdReset): New command.
+
+2000-09-02  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.119
+
+	* src/org/tzi/use/util/Report.java: Added comments.
+	(Report): Made more robust against errors in format string.
+
+2000-09-01  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.118
+
+	* src/org/tzi/use/util/StringUtil.java (pad): New method.
+	(center): New method.
+
+	* src/org/tzi/use/util/Report.java: New.
+
+	* src/org/tzi/use/main/Shell.java (cmdInfoState): Print number of
+	objects in subclasses. Mark abstract classes. Use new Report class
+	for output.
+
+	* src/org/tzi/use/parser/ASTIdExpression.java (gen): Build self
+	expression as variable, remove reference to ExpSelf.
+
+	* src/org/tzi/use/uml/mm/MMInstanceGenerator.java: generate `--'
+	instead of `//' comments.
+
+	* etc/use.el: Split into two modes.
+
+	* src/org/tzi/use/uml/sys/cmd/MCmdDestroyObjects.java (undo): Also
+	restore links.
+	(execute): Store object states instead of objects.
+
+2000-08-31  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.117
+
+	* src/org/tzi/use/uml/sys/cmd/MCmdDestroyObjects.java (execute):
+	Handle removed links.
+
+	* src/org/tzi/use/uml/sys/MSystemState.java (deleteObject): Return
+	removed links.
+
+	* src/org/tzi/use/main/Shell.java (processLine): Accept '--' as
+	comment start.
+
+	* etc/use.el: Extended to .cmd files.
+
+	* src/org/tzi/use/uml/mm/MClass.java (allAssociations): Bug fix:
+	also add associations of this class.
+
+	* src/org/tzi/use/uml/sys/StateChangeEvent.java (toString): New.
+
+	* src/org/tzi/use/uml/sys/cmd/MCmdSetAttribute.java (execute):
+	Catch IllegalArgumentException.
+
+	* src/org/tzi/use/util/UnaryPredicate.java: New class.
+
+	* src/org/tzi/use/util/FilterIterator.java: New class.
+
+	* src/org/tzi/use/gui/views/NewObjectDiagram.java: Handle n-ary
+	links. Added new kinds of nodes and edges.
+
+	* examples/CarRental2.use: Align with case study.
+
+2000-08-14  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.116
+
+	* README.in: Remove reference to non-existent picture.
+
+	* VERSION: 0.115
+
+	* www: home.html links to index.html
+
+	* src/org/tzi/use/gui/views/NewObjectDiagram.java (Edge.draw):
+	Underline association names.  Draw rolenames for reflexive
+	links. Use rectangle for reflexive links.
+
+2000-08-13  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.114
+
+	* src/org/tzi/use/uml/ocl/value/SequenceValue.java (count): Fixed.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpStdOp.java
+	(Op_collection_equal): Removed.
+	(Op_set_notequal): New.
+	(Op_bag_equal): New.
+	(Op_bag_notequal): New.
+	(Op_sequence_equal): New.
+	(Op_sequence_notequal): New.
+	(Op_sequence_union): New.
+	(Op_sequence_prepend): New.
+	(Op_sequence_subSequence): New.
+	(Op_sequence_first): New.
+	(Op_sequence_including): New.
+	(Op_sequence_excluding): New.
+
+2000-08-11  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* README.OCL: Renamed from BUGS.
+
+	* intern/www/index.html.in: Added ref to UML'2000 paper. Sync with
+	README.in.
+
+	* src/org/tzi/use/util/Bag.java (add): Specify count of equal
+	objects to be added.
+
+	* src/org/tzi/use/uml/ocl/value/BagValue.java (count): Fixed.
+	(intersection): New.
+
+	* src/org/tzi/use/util/HashBag.java: Use MutableInteger instead of
+	Integer.
+
+	* src/org/tzi/use/uml/ocl/value/CollectionValue.java
+	(excludesAll): New, also in subclasses.
+
+	* src/org/tzi/use/uml/ocl/value: Redesigned Collection values and
+	subclasses. Package external interface is now read-only.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpStdOp.java
+	(Op_collection_excludes): New.
+	(Op_collection_excludesAll): New.
+	(Op_collection_sum): New.
+	(Op_set_intersection_bag): New.
+	(Op_set_asBag): New.
+	(Op_set_symmetricDifference): Allow subtypes.
+	(Op_bag_union_set): New.
+	(Op_bag_intersection): New.
+	(Op_bag_intersection_set): New.
+	(Op_bag_including): New.
+
+	* VERSION: 0.113
+
+	* src/org/tzi/use/uml/sys/MSystemState.java (check): Print time.
+
+2000-08-10  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.112
+
+	* src/org/tzi/use/uml/mm/MMInstanceGenerator.java: More complete now.
+
+	* src/org/tzi/use/uml/mm/MOperation.java (signature): New.
+
+	* src/org/tzi/use/uml/sys/MSystemState.java (check): Count
+	invariants, print summary of results.
+
+	* src/org/tzi/use/uml/ocl/value/UndefinedValue.java (compareTo):
+	May compare to any value.
+
+	* src/org/tzi/use/uml/ocl/value/ObjectValue.java (type): Return
+	the actual type of the object.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpNavigation.java (eval): Handle
+	navigation to ordered association ends.
+	(eval): Handle empty result in case of 0..1 multiplicity.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpStdOp.java (Op_object_equal):
+	Allow subtypes.
+	(Op_collection_equal): Handle undefined args.
+	(Op_set_equal): Likewise.
+	(Op_collection_includes): Handle undefined source collection.
+	(Op_collection_count): Likewise.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpIsKindOf.java (eval): Fixed.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpIsTypeOf.java: New.
+
+	* src/org/tzi/use/parser/use.g (typeExpression): Added
+	oclIsTypeOf.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpQuery.java: Bug fix: check type
+	of element variables.
+	(evalExistsOrForAll0): Undefined query values default to false.
+
+	* src/org/tzi/use/config/Options.java (extClassDiagram): Added
+	option.
+
+	* src/org/tzi/use/gui/main/ClassDiagramView.java: New class
+	interfaces to Verenas graph layout package.
+
+2000-08-09  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.111
+
+	* examples/UML13All.use: Cont'd.
+
+	* src/org/tzi/use/parser/ASTOperationExpression.java
+	(genObjOperation): Also check standard operations.
+
+	* src/org/tzi/use/parser/ASTQueryExpression.java: Bug fix: make sure
+	range type is a collection.
+
+	* src/org/tzi/use/parser/test/t5.use: New test case for bug fix in
+	ASTQueryExpression.java
+
+	* src/org/tzi/use/uml/sys/MSystemState.java (check): Made output
+	less verbose.
+
+	* src/org/tzi/use/uml/ocl/type/TypeFactory.java (mkCollection):
+	New.
+
+	* src/org/tzi/use/uml/ocl/type/CollectionType.java: Made
+	non-abstract.
+	(isSubtypeOf): Implemented.
+
+	* VERSION: 0.110
+
+	* examples/UML13All.use: Cont'd.
+
+2000-08-08  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.109
+
+	* examples/UML13All.use: New file.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpStdOp.java (opmap): Added
+	MultiMap for operations for faster lookup.
+	(create): Use opmap.
+	(create): Improve error messages.
+
+	* etc/use.el (use-generic-mode): added keywords and modified some
+	regexps.
+
+2000-07-18  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.108
+	
+	* src/org/tzi/use/gui/views/NewObjectDiagram.java
+	(displayObjectInfo): Show attribute values of selected object on
+	btn-2.
+
+2000-07-17  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.107
+	
+	* intern/www: Updated documentation, new screenshots, extended
+	quick tour, etc.
+
+	* src/org/tzi/use/gui/views/NewObjectDiagram.java
+	(maybeShowPopup): Added delete action for objects.
+
+	* src/org/tzi/use/gui/main/MainWindow.java (MainWindow): Add
+	listener for executed commands from the shell for updating undo
+	feature.
+	(enableUndo): Set tool tip from command name.
+
+	* src/org/tzi/use/main/Shell.java (cmdExec): Notify session about
+	executed cmd.
+
+	* src/org/tzi/use/main/Session.java: Added listener for command
+	execution.
+
+	* src/org/tzi/use/uml/sys/cmd/MCmdDeleteLink.java: New command.
+
+	* src/org/tzi/use/parser/ASTDeleteCmd.java: New class.
+
+	* src/org/tzi/use/parser/use.g (deleteCmd): New rule.
+
+2000-07-13  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.106
+	
+	* src/org/tzi/use/uml/sys/cmd/MCmdCreateObjects.java: Renamed.
+
+	* src/org/tzi/use/uml/sys/MSystemState.java (deleteObject): Also
+	remove dangling links.
+
+	* src/org/tzi/use/uml/sys/MLinkSet.java (removeAll): New method.
+
+	* src/org/tzi/use/uml/mm/MClass.java (associations): New method.
+	(allAssociations): New method.
+
+	* src/org/tzi/use/uml/mm/MAssociation.java (associationEndsAt):
+	New method.
+
+	* src/org/tzi/use/parser/use.g (destroyCmd): Added rule. Rename
+	Stmts to Cmds.
+
+	* src/org/tzi/use/parser/ASTDestroyCmd.java: New class
+
+	* src/org/tzi/use/uml/sys/cmd/MCmdDestroyObjects.java: New command.
+
+2000-07-12  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.105
+
+	* doc: Moved doc and doc/www to intern. Install into $(TOP)/doc
+	not into web server directory. Add www-docs to distro.
+
+2000-07-11  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.104
+
+	* src/org/tzi/use/gui/views/NewObjectDiagram.java
+	(maybeShowPopup): Check for empty selection.
+
+	* src/org/tzi/use/gui/main/MainWindow.java
+	(ActionViewCreateObjectDiagram): Show info in status bar.
+
+	* examples: Cleaned up comment syntax.
+
+2000-07-07  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.103
+
+	* src/org/tzi/use/gui/views/NewObjectDiagram.java (printDiagram):
+	Added basic printing facilities. Result is ugly.
+
+2000-07-03  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.102
+
+	* src/org/tzi/use/parser/use.g (associationEnd): Fixed comment.
+
+	* src/org/tzi/use/gui/views/NewObjectDiagramView.java
+	(insertLink): Fix and improve for reflexive associations.
+
+	* src/org/tzi/use/uml/sys/cmd/MCmd.java (getUSEcmd): New method
+	for all commands.
+
+	* src/org/tzi/use/uml/sys/MSystem.java (writeUSEcmds): New method.
+
+	* src/org/tzi/use/gui/main/MainWindow.java (sessionChanged): Bug
+	fix: handle recently added actions.
+	(fLogWriter): reuse log writer.
+	(ActionFileSaveScript): New action.
+
+2000-06-28  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.101
+
+	* src/org/tzi/use/gui/views/NewObjectDiagram.java (paint): handle
+	reflexive edges. Optionally draw role names.
+	(maybeShowPopup): Create links between selected objects.
+
+	* src/org/tzi/use/graph/DirectedGraph.java (edgesBetween): New
+	method.
+
+	* src/org/tzi/use/uml/sys/MSystemState.java
+	(hasLinkBetweenObjects): New method.
+
+2000-06-27  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.100
+
+	* src/org/tzi/use/uml/mm/MAssociation.java (associatedClasses):
+	New method.
+
+	* src/org/tzi/use/uml/mm/MModel.java
+	(getAssociationsBetweenClasses): New method.
+
+	* src/org/tzi/use/gui/views/NewObjectDiagram.java (mousePressed):
+	Added selection and dragging of multiple objects.
+
+	* src/org/tzi/use/gui/util/Selectable.java: Interface for
+	selectable items.
+
+	* src/org/tzi/use/gui/util/Selection.java: New class for
+	maintaining sets of selected items.
+
+2000-06-26  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.99
+
+	* bin/use.bat: Use -nr by default.
+
+	* NEWS: Added entries.
+
+	* README.in: Added section about reporting bugs.
+
+	* src/org/tzi/use/gui/main/LogPanel.java: Added popup menu for
+	clearing the log.
+
+	* src/org/tzi/use/gui/main/MainWindow.java (checkStructure):
+	Listen for, check and log structural state changes.
+	(ActionStateCheckStructure): New action.
+
+	* src/org/tzi/use/gui/views/ObjectPropertiesView.java: Added combo
+	box for selecting an object.
+
+2000-06-25  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.98
+
+	* src/org/tzi/use/gui/main/MainWindow.java
+	(ActionViewCreateObjectProperties): New action.
+	(ActionEditProperties): New action.
+
+	* src/org/tzi/use/gui/main/ModelBrowser.java (displayInfo): Set
+	font style for body in HTML output.
+
+	* src/org/tzi/use/parser/use.g (STRING): Also allow double quotes
+	for strings (a jdk1.3-beta bug doesn't accept single quotes in
+	swing components).
+
+	* src/org/tzi/use/uml/sys/cmd/MCmdCreateObject.java (getChanges):
+	Handle undo changes.
+
+	* src/org/tzi/use/graph/DirectedGraph.java (remove): Provided an
+	implementation which also removes incident edges.
+	(removeEdge): New method.
+
+	* src/org/tzi/use/uml/sys/MSystem.java (fireStateChanged): Pass
+	flag indicating normal or undo action.
+
+	* src/org/tzi/use/gui/views/NewObjectDiagram.java (deleteObject):
+	New method.
+	(deleteLink): New method.
+
+2000-06-24  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.97
+
+	* src/org/tzi/use/graph/layout/SpringLayout.java: Added margin
+	parameters.
+
+	* src/org/tzi/use/gui/views/NewObjectDiagram.java (drop): Added DnD.
+
+	* src/org/tzi/use/gui/main/ModelBrowser.java
+	(dragGestureRecognized): Transfer class name.
+	(getTreeCellRendererComponent): Added tool tips.
+
+	* src/org/tzi/use/gui/main/MainWindow.java (addNewViewFrame):
+	Bug fix for jdk1.3: Added f.setVisible.
+	(createObject): Used for creation via dialog and DnD.
+
+2000-06-22  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.96
+
+	* src/org/tzi/use/gui/views/NewObjectDiagram.java (LayoutThread):
+	Added layout thread.
+
+	* src/org/tzi/use/graph/layout/SpringLayout.java (layout): Keep
+	graph within center of the drawing area.
+
+2000-06-21  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.95
+
+	* src/org/tzi/use/gui/views/NewObjectDiagram.java (Node):
+	Implements PlaceableNode.
+	(autoLayout): Layout object diagram.
+
+	* src/org/tzi/use/graph/layout/PlaceableNode.java: Interface for
+	nodes with xy position.
+
+	* src/org/tzi/use/graph/layout/SpringLayout.java: New layout
+	algorithm.
+
+2000-06-08  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.94
+
+	* src/org/tzi/use/gui/views/NewObjectDiagram.java: Continued
+	implementation.
+
+	* src/org/tzi/use/uml/sys/cmd/MCmdInsertLink.java (undo):
+	Implemented.
+
+	* src/org/tzi/use/uml/sys/MSystemState.java (deleteLink): New
+	method.
+
+	* src: Removed unused classes AssertionException.java, Debug.java,
+	Predicate.java.
+
+	* src: Added missing package.html files.
+
+	* src: Removed obsolete gui/browser package.
+
+2000-06-07  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.93
+
+	* bin/use: Added use_nojit link as a way to disable JIT compiler.
+
+	* src/org/tzi/use/gui/main/ModelBrowser.java: Started work on DnD.
+
+	* src/org/tzi/use/gui/views/NewObjectDiagramView.java: Use
+	NewObjectDiagram.
+
+	* src/org/tzi/use/gui/views/NewObjectDiagram.java: Started new
+	implementation of object diagrams.
+
+	* src/org/tzi/use/uml/sys/StateChangeListener.java: New class.
+
+	* src/org/tzi/use/uml/sys/StateChangeEvent.java: New class.
+
+	* src/org/tzi/use/uml/sys/MSystem.java (fireStateChanged): Send
+	detailed StateChangeEvent.
+
+	* src/org/tzi/use/uml/sys/cmd/MCmd.java: Added getChanges()
+	method.
+
+	* src/org/tzi/use/util/cmd/CommandProcessor.java (undoLast):
+	Return command.
+
+	* src/org/tzi/use/gui/views/ObjectDiagram.java: Refactored from
+	GraphView into a separate file.
+
+	* src/org/tzi/use/gui/views/ObjectDiagramView.java: Renamed.
+
+	* src/org/tzi/use/gui/views/ObjectCountView.java: Renamed.
+
+	* src/org/tzi/use/gui/views/LinkCountView.java: Renamed.
+
+2000-06-05  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.92
+
+	* src/org/tzi/use/main/Session.java: New class for maintaining
+	current session.
+
+	* src/org/tzi/use/config/Options.java (processArgs): spec_file now
+	completely optional.
+
+	* src/org/tzi/use/main/Shell.java (cmdOpen): New command.
+	Use session instead of system.
+
+	* src/org/tzi/use/gui/main/ModelBrowser.java (CellRenderer): 
+	Draw top-level nodes always as non-leaf nodes.
+
+2000-06-03  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.91
+
+	* src/org/tzi/use/main/Main.java (main): Allow startup without
+	spec file.
+
+	* src/org/tzi/use/gui/main/MainWindow.java (setSystem): Allow
+	system change.
+
+	* src/org/tzi/use/gui/main/ModelBrowser.java (setModel): Allow
+	changing model.
+	(createNodes): Only create categories if non-empty. Otherwise
+	categories would be represented as leafs.
+
+	* src/org/tzi/use/config/Options.java (processArgs): Made
+	spec_file optional in GUI mode.
+
+2000-06-02  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.89
+
+	* src/org/tzi/use/gui/main/MainWindow.java: Show log view by
+	default.
+
+	* src/org/tzi/use/gui/main/LogPanel.java: New class.
+
+	* VERSION: 0.88
+
+	* merged in changes from version 0-9-release
+
+2000-05-04  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0-9-release.2
+
+	* README.in: Updated.
+	* INSTALL: dto.
+
+2000-05-03  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.88
+
+	* Makefile (dist): Added bin and etc.
+
+	* doc/www/qt.html.in: Updated. Changed all graphics to PNG
+	format. Added generated images to project.
+
+2000-05-02  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.87
+
+	* src/org/tzi/use/graph/layout: New package.
+
+	* doc/www/qt.html.in: Updated.
+
+	* doc/www: New screen shots.
+
+	* src/org/tzi/use/uml/mm/MMHTMLPrintVisitor.java (id): Removed
+	hyperlinks for identifiers.
+
+2000-04-27  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.86
+
+	* src/org/tzi/use/gui/main/MainWindow.java (create): Don't
+	create initial views.
+
+2000-04-18  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.85
+
+	* src/org/tzi/use/uml/sys/MSystemState.java (deleteObject): New
+	method.
+
+	* src/org/tzi/use/uml/sys/cmd/MCmdCreateObject.java: Added undo
+	capability.
+
+	* src/org/tzi/use/uml/ocl/value/VarBindings.java (remove): New method.
+
+	* src/org/tzi/use/config/Options.java: Changed option gui to
+	nogui. Default is now to start with GUI.
+
+	* src/org/tzi/use/gui/main/CreateObjectDialog.java (createObject):
+	Update undo action in MainWindow.
+
+2000-04-17  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.84
+
+	* src/org/tzi/use/gui/main/CreateObjectDialog.java (createObject):
+	Added object creation.
+
+	* src/org/tzi/use/gui/main/MainWindow.java: Added ActionEditUndo.
+
+	* src/org/tzi/use/gui/util/GridBagHelper.java: New class.
+
+2000-04-16  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.83
+
+	* src/org/tzi/use/gui/main/CreateObjectDialog.java: New dialog.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpStdOp_test.java (doTests): Added
+	test case for abs operation.
+
+	* src/org/tzi/use/gui/main/MainWindow.java (ActionFileExit): New action.
+
+	* src/org/tzi/use/gui/main/AboutDialog.java: New class.
+
+	* src/org/tzi/use/gui/main/EvalOCLDialog.java (evaluate): Fixed
+	caret positioning.
+	(closeDialog): Close on escape.
+
+	* src/org/tzi/use/util/StringUtil_test.java: New class.
+
+2000-04-15  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.82
+
+	* src/org/tzi/use/util/StringUtil.java: Renamed from Format.java.
+	(nthIndexOf): New method.
+
+	* src/org/tzi/use/util/TeeWriter.java: New class.
+
+	* src/org/tzi/use/gui/main/MainWindow.java: New command for OCL
+	eval dialog.
+
+	* src/org/tzi/use/gui/main/EvalOCLDialog.java: New class.
+
+2000-04-12  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.81
+
+	* src/org/tzi/use/uml/sys/MSystemState.java
+	(binaryAssociationsAreValid): Consider objects of subclasses.
+	fClassObjects: Added for efficient access to all objects of a class.
+
+	* src/org/tzi/use/util/HashMultiMap.java: New class.
+
+	* src/org/tzi/use/util/MultiMap.java: New class.
+
+2000-04-11  Mark Richters  <mr@dustbin.informatik.uni-bremen.de>
+
+	* src/org/tzi/use/main/Shell.java (cmdGenMM): Added optional file
+	name argument.
+
+2000-04-10  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.80
+
+	* src/org/tzi/use/main/Shell.java (cmdUndo): New command.
+
+	* src/org/tzi/use/uml/sys/MSystem.java (undoCmd): Added.
+
+	* src/org/tzi/use/uml/sys/cmd/MCmdSetAttribute.java: Made command
+	undoable.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpAllInstances.java (eval): Bug
+	fix: include instances of subclasses.
+
+	* test/t2.use: New test cases for expressions on system state.
+
+	* src/org/tzi/use/config/Options.java (initProperties): Search
+	property file in etc directory.
+
+	* etc/use.properties: Moved to etc directory.
+
+	* bin: Created bin directory. Moved use shell script.
+
+2000-04-09  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.79
+
+	* src/org/tzi/use/gui/main/MainWindow.java: Added
+	StateEvolutionView.
+
+	* src/org/tzi/use/gui/views/StateEvolutionView.java: New class.
+
+	* src/org/tzi/use/gui/views/LineChartView.java: New class.
+
+2000-04-06  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.78
+
+	* src/org/tzi/use/uml/sys/MSystemState.java (createLink): Throw
+	exception if link already exists.
+
+	* src/org/tzi/use/gui/views/View.java: New interface for all
+	views.
+
+	* src/org/tzi/use/uml/sys/MLinkImpl.java (equals): Bug fix:
+	comparison of Collections always is false. 
+	(linkEnds): Changed to Set return type to allow equals test.
+
+	* images: Redesigned some icons.
+
+	* src/org/tzi/use/uml/sys/MSystem.java (createObject): Allow
+	user-defined name for new object.
+
+	* src/org/tzi/use/gui/views/GraphView.java (GraphPanel): Added
+	popup menu for toggling auto-layout.
+
+	* src/org/tzi/use/gui/main/MainWindow.java: Put count views into
+	ScrollPanes.
+
+	* VERSION: 0.77
+
+2000-04-04  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* src/org/tzi/use/main/Shell.java (cmdGenMM): Added new command.
+
+	* src/org/tzi/use/gui/main/MainWindow.java (MainWindow): Added
+	creation of initial views.
+
+	* src/org/tzi/use/gui/views/ClassInvariantView.java (setData):
+	Show number of failing constraints in status panel.
+
+	* src/org/tzi/use/uml/mm/MMInstanceGenerator.java: New class.
+
+	* src/org/tzi/use/uml/ocl/expr/ExpIsKindOf.java (eval): Implemented.
+
+	* src/org/tzi/use/uml/ocl/value/BooleanValue.java: Added constant values.
+
+	* src/org/tzi/use/parser/use.g (cmd): Made semicolon at end optional.
+
+	* src/org/tzi/use/uml/mm/MAttribute.java: Added owner field.
+
+	* src/org/tzi/use/main/Shell.java: Replaced all \n with
+	Options.LINE_SEPARATOR.
+
+2000-04-02  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.76
+
+	* src/org/tzi/use/gui/main/MainWindow.java: Use only one tool
+	bar. Don't stack all new frames at (0,0). Added link count view
+	and state tree view.
+
+2000-04-01  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.75
+
+	* src/org/tzi/use/gui/util/TextComponentWriter.java (write): Made
+	thread-safe.
+
+	* src/org/tzi/use/gui/main/MainWindow.java: New GUI main window.
+
+2000-03-31  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* src/org/tzi/use/gui/util/ExtFileFilter.java: New file.
+
+2000-03-26  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.74
+
+	* src/org/tzi/use/uml/ocl/expr/ExpStdOp.java (Op_sequence_asBag):
+	New operation. 
+
+2000-03-24  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.73
+
+	* etc/use.el: Added USE generic mode for emacs.
+
+	* src/org/tzi/use/main/Main.java (main): Added output of model
+	statistics.
+
+2000-03-21  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.72
+
+	* intern/UML13metamodel.use: Moved from examples.
+
+	* src/org/tzi/use/util/input/LineInput.java (getReadline): Made
+	errorMessage configurable.
+
+	* src/org/tzi/use/main/Shell.java (run): Added detailed message
+	about missing readline library.
+
+	* src/org/tzi/use/config/Options.java: Added switch -nr.
+
+	* doc/www: Moved generated images to directory gen-img. Removed
+	them from project file.
+
+2000-03-19  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.71
+
+2000-03-18  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* src/org/tzi/use/main/Main.java (main): close window on exit and
+	stop application.
+
+	* removed packages geom, gelem, diagram, layout, and gui.editor
+	
+	* VERSION: 0.70
+
+	* set copyright header on source files.
+
+	* VERSION: 0.69
+
+	* doc/www: added screen shots, added text.
+
+2000-03-17  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.68
+
+	* doc/www/home.html.in: added quick tour.
+
+2000-03-16  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.67
+
+	* doc/www/home.html.in: updated.
+
+	* INSTALL: updated.
+
+	* README.in: updated.
+
+	* src/org/tzi/use/config/Options.java: changed version handling.
+
+	* Makefile: changed version handling and dist creation.
+
+	* use.prj: added project keywords for release.
+
+	* VERSION: 0.66
+
+	* Makefile.inc: fixes in multi-line comment
+
+2000-03-15  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.65
+
+	* bug fixes, refined demo
+
+2000-03-07  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.64
+
+	* src/org/tzi/use/gui/views/GraphView.java: Added popup window for
+	object state info.
+
+	* src/org/tzi/use/gui/views/ClassInvariantView.java: Double click
+	opens evaluation browser.
+
+	* src/org/tzi/use/main/Main.java: Added a metal L&F theme which
+	uses font information in use.properties. Customized tree
+	display. 
+
+	* Removed explicit setting of fonts in gui.views.
+
+	* VERSION: 0.63
+
+	* src/org/tzi/use/uml/ocl/expr/EvalContext.java: Build evaluation
+	tree.
+
+	* src/org/tzi/use/gui/views/ExprEvalBrowser.java: Added tree
+	browser for OCL evaluation.
+
+	* src/org/tzi/use/main/Main.java (initGUIdefaults): Added
+	individual GUI settings.
+
+	* images: Added some icons for JTree display.
+
+2000-03-06  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.62
+
+	* src/org/tzi/use/gui/views/SystemStateView.java: Integrated
+	ClassInvariantView.
+
+	* src/org/tzi/use/gui/views/ClassInvariantView.java: Added
+	label. Check for valid state before checking invariants.
+
+2000-03-05  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.61
+
+	* src/org/tzi/use/gui/views: Added several views.
+
+	* examples/Demo.use: Added demo spec.
+
+	* src/org/tzi/use/uml/sys/MSystemState.java (check): reactivated.
+
+	* VERSION: 0.60
+
+	* src/org/tzi/use/gui/views/BarChartView.java: New views.
+
+	* src/org/tzi/use/uml/sys/MSystem.java: Added event listeners to
+	observe system state changes.
+
+	* src/org/tzi/use/uml/sys/cmd/MCmd.java: fixed commands.
+	* updated GUI classes.
+
+2000-03-03  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* renamed remaining references to juse.
+
+	* VERSION: 0.59
+
+	* use.prj: major package reorganization and rewrite of model
+	packages.
+
+2000-02-16  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.58
+
+	* renamed package prefix to org.tzi.use
+
+	* renamed juse to use
+
+2000-01-24  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.57
+
+	* src/DE/uni_bremen/juse/gui/main: New package.
+
+	* src/DE/uni_bremen/juse/config/Options.java: Check for home
+	dir. Define iconDir.
+
+	* src/DE/uni_bremen/juse/parser/USECompiler.java: Use PrintWriter
+	instead of PrintStream.
+
+	* src/DE/uni_bremen/juse/parser/MyParser.java: Report errors on
+	user-defined stream.
+
+	* src/DE/uni_bremen/juse/parser/MyLexer.java: Report errors on
+	user-defined stream.
+
+	* src/DE/uni_bremen/juse/gui/util/StatusBar.java: Moved from
+	editor package.
+
+2000-01-20  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.56
+
+	* src/DE/uni_bremen/juse/model/MModelHTMLPrintVisitor.java: Print
+	model in HTML format.
+
+	* src/DE/uni_bremen/juse/model/MModelPrintVisitor.java:
+	Generalized to allow subclasses.
+
+	* src/DE/uni_bremen/juse/gui/browser/SystemBrowser.java: New
+	package and class.
+
+2000-01-17  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.55
+
+	* src/DE/uni_bremen/juse/parser/ASTExpression.java
+	(genNavigation): Fixed search of association ends. Handle
+	inherited associations.
+
+	* src/DE/uni_bremen/juse/model/expr/ExpStdOp.java: New
+	operation Op_collection_equal.
+
+	* src/DE/uni_bremen/juse/model/expr/ExpQuery.java
+	(evalSelectOrReject): Handle undefined range.
+	(evalExistsOrForAll): Likewise. 
+	(evalCollect): Likewise. 
+
+	* src/DE/uni_bremen/juse/model/expr/ExpObjOp.java (eval): Fixes
+	for dropped context object.
+
+	* src/DE/uni_bremen/juse/model/expr/ExpNavigation.java (eval):
+	Fixed (previously undefined) empty link sets.
+
+	* src/DE/uni_bremen/juse/model/expr/ExpIterate.java (eval): Handle
+	undefined range.
+
+	* src/DE/uni_bremen/juse/model/expr/ExpAsType.java (eval):
+	Implemented for object types.
+
+	* src/DE/uni_bremen/juse/model/expr/EvalContext.java: Removed
+	context object.
+
+	* src/DE/uni_bremen/juse/model/MSystemState.java (isValid): Check
+	invariants. Dropped local constraints for now.
+
+	* examples/UML13metamodel.use: Completed WFRs.
+
+	* src/DE/uni_bremen/juse/model/MInvariant.java (invariant):
+	Creates expanded expression.
+
+2000-01-09  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.54
+
+	* src/DE/uni_bremen/juse/parser/use.g: Increased k to 3 for
+	allInstances construct.
+	(primaryExpression): Added allInstances.
+
+	* src/DE/uni_bremen/juse/parser/USECompiler.java: Added
+	user-defined error stream to method interfaces.
+
+	* src/DE/uni_bremen/juse/parser/MyToken.java: Maintain full
+	information about source position.
+
+	* src/DE/uni_bremen/juse/parser/MyLexer.java (makeToken): Create
+	new token here instead of using antlr reflection mechanism.
+
+	* src/DE/uni_bremen/juse/parser/Context.java: Fixed constructor.
+	Allow user-defined output stream for messages.
+
+	* src/DE/uni_bremen/juse/parser/SemanticException.java: Renamed
+	from CodeGenException.
+
+	* examples/UML13metamodel.use: Added more constraints.
+	Fixed abstract classes.
+
+2000-01-07  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* src/DE/uni_bremen/juse/parser/SrcPos.java: New class for
+	position information.
+
+2000-01-06  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* src/DE/uni_bremen/juse/parser/MyLexer.java: Prefixed fields.
+
+2000-01-05  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.53
+
+	* src/DE/uni_bremen/juse/parser/Context.java: Added type table.
+
+	* src/DE/uni_bremen/juse/parser/Symtable.java: Generalized entry
+	type to hold variabels and types.
+
+	* src/DE/uni_bremen/juse/parser/test/TestDriver.java: Driver class
+	for all tests.
+
+	* src/DE/uni_bremen/juse/parser/test: New directory for parser
+	test files.
+
+	* src/DE/uni_bremen/juse/parser/ASTMultiplicity.java (gen): Catch
+	exception caused by invalid multiplicities.
+
+	* src/DE/uni_bremen/juse/model/MMultiplicity.java (Range): Added
+	more consistency checks.
+
+2000-01-04  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.52
+
+	* src/DE/uni_bremen/juse/parser/ASTIdExpression.java
+	(ASTIdExpression): More cases.
+
+	* src/DE/uni_bremen/juse/model/value/OclTypeValue.java: New class.
+
+	* src/DE/uni_bremen/juse/model/type/TypeFactory.java (mkOclType):
+	Create OclType.
+
+	* src/DE/uni_bremen/juse/model/type/OclType.java: New class.
+
+	* BUGS: New file.
+
+	* README.in: Added LNCS number.
+
+2000-01-02  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.51
+
+	* src/DE/uni_bremen/juse/gui/editor/DiagramComponentPropertiesDlg.java
+	(updateSettings): Use lexer from parser package for keyword
+	highlighting.
+
+	* src/DE/uni_bremen/juse/diagram/ClassDiagram.java
+	(createFromModel): Read a diagram file with layout information if
+	available.
+	(writeClassPositions): Write class positions as a property file.
+
+	* test/Test.use: Renamed from Empty.use. Needed a class for test
+	of allInstances operation.
+
+	* src/DE/uni_bremen/juse/gui/editor/DiagramPanel.java
+	(suppressAssociations): Turn on/off view of associations.
+	(suppressGeneralizations):  Turn on/off view of generalizations.
+
+	* src/DE/uni_bremen/juse/gui/editor/ClassDiagramView.java: Added
+	View/Suppress submenu. New menu item Diagram/Save saves current
+	positions of classes.
+
+	* src/DE/uni_bremen/juse/main/Main.java (main): Integrated GUI.
+
+	* src/DE/uni_bremen/juse/config/Options.java (processArgs): Added
+	-gui option.
+	(processArgs): Build default file name for diagram information.
+
+	* src/DE/uni_bremen/juse/parser/MyLexer.java (isKeyword): Added
+	test for keyword. Use it in DiagramComponentPropertiesDlg.
+
+1999-12-28  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* test/queries.in: Update of test cases. Use oclEmpty.
+
+1999-12-27  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.50
+
+	* src/DE/uni_bremen/juse/parser/Context.java (reportWarning): New
+	method for warnings.
+
+	* src/DE/uni_bremen/juse/model/value/SequenceValue.java (flatten):
+	New method.
+
+	* src/DE/uni_bremen/juse/model/value/SetValue.java (flatten): New
+	method.
+
+	* src/DE/uni_bremen/juse/model/value/BagValue.java (flatten): New
+	method.
+
+	* src/DE/uni_bremen/juse/model/MOperation.java: Assert correct
+	expression type.
+
+	* src/DE/uni_bremen/juse/model/MModelPrintVisitor.java: Various
+	fixes to generate output that is also valid as input.
+
+	* src/DE/uni_bremen/juse/parser/use.g (associationEnd): Added
+	"ordered" clause.
+	(emptyCollectionLiteral): Rule for type-safe empty collections.
+
+	* src/DE/uni_bremen/juse/model/expr/ExpStdOp.java: New operations
+	Op_collection_flatten, Op_set_union_bag, Op_sequence_asSet,
+	Op_bag_union.
+
+	* src/DE/uni_bremen/juse/model/expr/ExpIsKindOf.java: New class
+	for "oclIsKindOf" expressions.
+
+1999-12-25  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* src/DE/uni_bremen/juse/model/expr/ExpEmptyCollection.java: New
+	class. Create empty collections.
+
+	* src/DE/uni_bremen/juse/model/expr/ExpAsType.java: New class for
+	"oclAsType" expressions.
+
+	* src/DE/uni_bremen/juse/parser/ASTAsTypeExpression.java: New
+	AST node.
+
+	* src/DE/uni_bremen/juse/parser/use.g (typeExpression):
+	New production.
+
+	* src/DE/uni_bremen/juse/model/expr/VarInitializer.java: Added
+	type check for init expression.
+
+1999-12-24  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.49
+
+	* src/DE/uni_bremen/juse/model/type/ObjectType.java (isSubtypeOf):
+	Implemented.
+
+	* src/DE/uni_bremen/juse/model/expr/ExpStdOp.java (name): Added
+	operation Op_bag_asSet.
+
+	* src/DE/uni_bremen/juse/parser/use.g (postfixExpression): Added
+	rule (no action yet) for oclAsType.
+
+1999-12-23  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.48
+
+	* src/DE/uni_bremen/juse/model/expr/ExpStdOp.java: New operations
+	Op_enum_equal and Op_enum_notequal.
+
+	* src/DE/uni_bremen/juse/model/type/ObjectType.java: Reference to
+	MClass.
+
+	* src/DE/uni_bremen/juse/model/expr/ExpConstEnum.java: New class.
+
+	* src/DE/uni_bremen/juse/parser/use.g (SL_COMMENT): Added -- style
+	comments.
+	(literal): Added enumeration literals.
+
+	* src/DE/uni_bremen/juse/model/MModel.java
+	(getDaVinciGraphForClassDiagram): Added generalization edges.
+
+1999-12-22  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.47
+
+	* src/DE/uni_bremen/juse/model/MModel.java: Added enum types to
+	model.
+
+	* examples/UML13metamodel.use: Started with spec of UML 1.3
+	metamodel.
+
+	* src/DE/uni_bremen/juse/parser/ASTEnumTypeDefinition.java: New
+	class.
+
+	* src/DE/uni_bremen/juse/parser/use.g (enumTypeDefinition): New
+	production.
+	(model): Added rule for enumTypeDefinitions.	
+
+	* src/DE/uni_bremen/juse/model/value/EnumValue.java: New value.
+
+	* src/DE/uni_bremen/juse/model/type/EnumType.java: New type.
+
+1999-10-19  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.46
+
+	* README.in: Added documentation.
+	* INSTALL: ditto.
+	* doc/juse.tex: ditto.
+
+1999-10-16  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.45
+
+	* test: New directory for test cases.
+	
+	* All: Use extension .use instead of .usl
+
+	* doc/www: WWW pages for juse.
+
+1999-10-14  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.44
+
+	* src/DE/uni_bremen/juse/parser/test_expr.usl: Added more test
+	cases.
+
+	* src/DE/uni_bremen/juse/model/expr/ExpStdOp.java (Op_real_round):
+	Added operation.
+	(Op_real_floor): Added floor : Integer -> Integer.
+
+	* src/DE/uni_bremen/juse/parser/usl.g (RANGE_OR_INT): Refined
+	syntactic predicate for REAL to match only if an INT follows the
+	dot. This way, expressions like 3.min(4) are correctly tokenized.
+
+	* README, INSTALL: First drafts.
+
+	* Makefile: Added dist target. Added antlr to subpackage list.
+
+	* New intern directory.
+
+	* src/DE: Removed Java 1.1 collections package and renamed all
+	import clauses to use the collections package from 1.2.
+
+	* src/antlr: Added ANTLR sources to project.
+
+1999-09-30  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.43
+
+	* src/DE/uni_bremen/juse/main/Shell.java (cmdInfoVars): New command.
+
+	* src/DE/uni_bremen/juse/model/value/VarBindings.java: Changed to
+	use an ArrayList instead of Stack.
+	(iterator): Access entries.
+
+	* src/DE/uni_bremen/juse/parser/usl.g (classDefinition): Added
+	rule for operations.
+
+	* src/DE/uni_bremen/juse/model/expr/EvalContext.java (copy): New
+	method.
+
+	* src/DE/uni_bremen/juse/model/expr/ExpObjOp.java: New class for
+	object operation expressions.
+
+	* src/DE/uni_bremen/juse/model/expr/ExpStdOp.java: Renamed from
+	ExpOperation.java.
+
+	* src/DE/uni_bremen/juse/model/MClass.java: Added constraints and
+	operations.
+
+	* src/DE/uni_bremen/juse/model/MConstraint.java: New class.
+
+1999-09-29  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.42
+
+	* src/DE/uni_bremen/juse/parser/usl.g (classDefinition): Fixed
+	action for abstract clause.
+
+	* src/DE/uni_bremen/juse/model/MSystemState.java
+	(createObject): Inhibit instantiation of abstract classes.
+
+	* src/DE/uni_bremen/juse/model/expr/ExpOperation.java: Added field
+	for kind of operation for correct handling of undefined arguments.
+	(eval): handle undefined arguments.
+	(Op_isDefined): New operation.
+	(Op_isUndefined): New operation.
+
+	* VERSION: 0.41
+
+	* src/DE/uni_bremen/juse/model/MSystemState.java
+	(getNavigableObjects): Fixed.
+
+	* src/DE/uni_bremen/juse/model/expr/ExpNavigation.java: Need
+	source end for a unique path.
+
+1999-09-26  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.40
+
+	* src/DE/uni_bremen/juse/main/Shell.java (cmdGraph): New command.
+
+	* src/DE/uni_bremen/juse/main/DaVinciProcess.java: New class.
+	* src/DE/uni_bremen/juse/util/ListNode.java: Ditto.
+	* src/DE/uni_bremen/juse/util/Queue.java: Ditto.
+
+1999-09-25  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.39
+
+	* src/DE/uni_bremen/juse/main/Shell.java (cmdInfoState): Add link
+	info.
+
+	* src/DE/uni_bremen/juse/model/MSystemState.java
+	(getNavigableObjects): New method.
+
+	* src/DE/uni_bremen/juse/model/expr/EvalContext.java: Added log
+	feature for subexpression results.
+
+	* src/DE/uni_bremen/juse/config/Options.java: Added LINE_SEPARATOR.
+
+	* src/DE/uni_bremen/juse/model/expr/Evaluator.java: Now a non-static class.
+
+1999-09-23  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.38
+
+	* Makefile: New targets find-fixme and find-todo.
+
+	* src/DE/uni_bremen/juse/parser/USECompiler.java: Integrated
+	parser interface. Replaces ExpressionParser, CommandParser,
+	SpecificationParser.
+
+	* src/DE/uni_bremen/juse/main/Shell.java (processLineSafely):
+	Added a catch-all exception handler.
+	(cmdCheck): New command.
+	(cmdExec): ditto.
+	(cmdInfoState): ditto.
+
+	* src/DE/uni_bremen/juse/util/Format.java (leftPad): New method.
+	(fill): ditto.
+
+1999-09-22  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.37
+
+	* src/DE/uni_bremen/juse/main/Shell.java: More
+	commands. Multi-line input.
+
+	* src/DE/uni_bremen/juse/util/input/StreamReadline.java:
+	Generalized SimpleReadline class.
+
+1999-09-21  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.36
+
+	* src/DE/uni_bremen/juse/parser/ExpressionCompiler.java: New class
+	providing interface for parsing expressions.
+
+	* src/DE/uni_bremen/juse/main/Shell.java (processLine): Added more
+	commands.
+
+	* src/antlr: Use ANTLR-2.6.1.
+
+	* src/DE/uni_bremen/juse/parser/MyLexer.java (makeToken): Set test
+	for EOF token.
+
+	* src/DE/uni_bremen/juse/model/MModel.java: Added list of queries.
+
+1999-09-20  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.35
+
+	* src/DE/uni_bremen/juse/parser/usl.g: Added query productions.
+
+	* VERSION: 0.34
+
+	* src/DE/uni_bremen/juse/parser/usl.g: Many changes required by the
+	modifications of the VarDecl class design.
+
+	* src/DE/uni_bremen/juse/model/expr/ExpQuery.java: Many changes
+	due to change in VarDecl class.
+
+	* src/DE/uni_bremen/juse/model/expr/VarDeclList.java: New class
+	for keeping lists of variable declarations.
+
+	* src/DE/uni_bremen/juse/model/expr/VarDecl.java: Changed to hold
+	only a single variable name. Can be used more generally this way.
+
+	* src/DE/uni_bremen/juse/model/expr/ExpIterate.java: Allow list of
+	element variables.
+	(eval): Recursive implementation for element variable lists.
+
+1999-09-19  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.33
+
+	* Makefile (test): Added test target for all subdirs.
+
+1999-09-17  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* src/DE/uni_bremen/juse/model/type/Type.java (isSubtypeOf):
+	Renamed from subtypeOf.
+
+	* src/DE/uni_bremen/juse/model/expr/ExpOperation.java: Added
+	Op_sequence_append and Op_sequence_last.
+
+	* src/DE/uni_bremen/juse/parser/test_expr.usl: Added sequence sort
+	expression.
+
+1999-09-16  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.32
+
+	* src/DE/uni_bremen/juse/system: Moved back to model package.
+
+	* src/DE/uni_bremen/juse/util/input/Readline.java: New package.
+
+	* numerous changes: created subpackages type, value, expr in model
+	package.
+
+1999-09-13  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.31
+
+	* juse.prj: Added files forgotten in previous version.
+
+1999-09-09  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.30
+
+	* various minor changes and fixes.
+	
+	* src/DE/uni_bremen/juse/system: New package. Moved system classes
+	from model package.
+
+	* src/DE/uni_bremen/juse/parser/usl.g (cmdStmt): Added some
+	rules for new command language.
+
+1999-09-08  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.29
+
+	* src/DE/uni_bremen/juse/config/Options.java: Added -daVinciClass
+	option.
+
+	* src/DE/uni_bremen/juse/model/MModel.java
+	(getDaVinciGraphForClassDiagram): New method.
+
+	* src/DE/uni_bremen/juse/model/MExpOperation.java
+	(MOp_object_equal): Added new operation.
+	(MOp_object_notequal): Likewise.
+
+	* src/DE/uni_bremen/juse/model/MAssociation.java
+	(navigableEndsFrom): Fixed special case for reflexive
+	associations.
+
+	* src/DE/uni_bremen/juse/parser/CarRental2.usl: New case study.
+
+	* src/DE/uni_bremen/juse/parser/usl.g (classDefinition): Added
+	abstract modifier for classes.
+	(conditionalXOrExpression): New rule.
+
+1999-09-04  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.28
+
+	* various minor changes and fixes.
+	
+	* src/DE/uni_bremen/juse/model/MSystemState.java
+	(getDaVinciGraph): Create daVinci graph representing an object
+	diagram.
+
+1999-07-07  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION: 0.27
+
+1999-06-10  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION 0.26
+
+	* src/DE/uni_bremen/juse/model/MAttribute.java: Implements
+	Comparable.
+
+	* src/DE/uni_bremen/juse/model/CarRentalModel.java: Inherits from
+	MModel. Public fields for classes.
+
+	* src/DE/uni_bremen/juse/model/MSystem.java: New class.
+	* src/DE/uni_bremen/juse/model/MSystemState.java: New class.
+	* src/DE/uni_bremen/juse/model/MObject.java: New class.
+	* src/DE/uni_bremen/juse/model/MObjectValue.java: New class.
+	* src/DE/uni_bremen/juse/model/MOIDGenerator.java: New class.
+	* src/DE/uni_bremen/juse/model/MSystemException.java: New class.
+
+1999-06-07  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION 0.25
+
+	* src/DE/uni_bremen/juse/parser/usl.g (model): Remove SEMI after
+	id.
+
+	* src/DE/uni_bremen/juse/model/MEvalContext.java: New class for
+	keeping context information during evaluation of expressions.
+
+	* src/DE/uni_bremen/juse/model/MExpression.java (eval): Replaced
+	variable bindings argument by an MEvalContext. Likewise for all
+	subclasses.
+
+1999-06-06  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION 0.24
+
+	* src/DE/uni_bremen/juse/parser/ASTIdExpression.java (gen): Added
+	code for some more cases.
+
+	* src/DE/uni_bremen/juse/parser/usl.g (queryExpression): Allow
+	variable lists in exists, forAll.
+
+	* src/DE/uni_bremen/juse/model/MVarDecl.java: Changed to allow
+	variable lists.
+
+	* src/DE/uni_bremen/juse/model/MExpQuery.java
+	(evalExistsOrForAll): Extended to handle element variable lists.
+
+	* src/DE/uni_bremen/juse/config/Options.java (processArgs): Added
+	option '-cp'.
+
+	* src/DE/uni_bremen/juse/main/Main.java (main): Added support for
+	option '-cp'.
+
+1999-06-05  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* src/DE/uni_bremen/juse/parser/usl.g: Initialize variables
+	defined in a return clause with null. Required for
+	defaultErrorHandler = true.
+
+1999-05-24  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION 0.23
+
+	* src/DE/uni_bremen/juse/parser: Major rewrite of tree code: don't
+	use antlr's tree parser, instead we generate an AST manually in
+	action code of the grammar. Now uses heterogenous AST structure in
+	AST* classes. Makes grammar easier to maintain.
+	
+	* src/DE/uni_bremen/juse/gui/editor/ClassDiagramView.java: New
+	command for auto-layout.
+
+	* src/DE/uni_bremen/juse/diagram/ClassDiagram.java (autoLayout):
+	Accepts an observer to watch progress.
+
+	* src/DE/uni_bremen/juse/model/MGeneralization.java: Bug
+	fix. Wrong order of arguments.
+
+	* src/DE/uni_bremen/juse/model/MMultiplicity.java: Added some
+	useful constants for default multiplicities. Changed Vector to
+	ArrayList. Default constructor now doesn't construct 0..*
+	multiplicity.
+
+	* src/DE/uni_bremen/juse/layout/GridLayouter.java (edgeDistances):
+	Rewritten to iterate over edges. Improved performance. 
+
+1999-05-18  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION 0.22
+
+	* examples/RoyalAndLoyal.usl: Added specification example.
+
+	* all: Lots of minor changes/cleanups.
+
+	* src/DE/uni_bremen/juse/parser/usl.g: Renamed isl to
+	usl. Reformatted file.
+
+	* src/DE/uni_bremen/juse/parser/isl.g (classDefinition): Added
+	optional specialization.
+
+1999-05-16  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* src/DE/uni_bremen/juse/main/Main.java: New class. Removed main
+	from gui.editor package.
+
+	* src/DE/uni_bremen/juse/config/Options.java: New class.
+
+	* src/DE/uni_bremen/juse/util/Log.java (println): Added optional
+	output of current time.
+
+1999-05-06  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION 0.21
+
+	* src/DE/uni_bremen/juse/model/MEvaluator.java: New class.
+
+	* src/DE/uni_bremen/juse/parser/isl.g (multiplicativeExpression):
+	Added div operator.
+
+	* src/DE/uni_bremen/juse/model/MExpOperation.java (eval): Handle
+	undefined arguments and arithmetic exceptions.
+	(MOp_sequence_at): New operation.
+
+	* src/DE/uni_bremen/juse/model/MUndefinedValue.java: New class.
+
+1999-05-05  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION 0.20
+
+	* src/DE/uni_bremen/juse/parser: Added variable expressions and
+	symbol table. Did some cleanup.
+
+	* src/DE/uni_bremen/juse/parser/test_expr.isl: Added more tests.
+
+	* src/DE/uni_bremen/juse/parser/isl.tree2.g (expr): Added branch
+	for if expressions.
+
+	* src/DE/uni_bremen/juse/parser/isl.g (ifExpression): Added to
+	primaryExpression.
+
+	* src/DE/uni_bremen/juse/model/MExpIf.java: Added if expressions.
+
+1999-05-04  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION 0.19
+
+	* src/DE/uni_bremen/juse/gui/editor/Main.java (main): Read model
+	from specification file.
+
+	* src/DE/uni_bremen/juse/parser: Added parser package. Updated to
+	antlr-2.6.0b13.
+
+	* src/DE/uni_bremen/juse/model/MVarDecl.java (MVarDecl): Add
+	check: vartype must not be null.
+
+1999-04-17  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION 0.18
+
+	* src/DE/uni_bremen/juse/gui/editor/DiagramComponentPropertiesDlg.java
+	(ClassProperties): Use a TextPane for the specification text for
+	doing syntax highlighting.
+
+	* src/DE/uni_bremen/juse/util/CountReader.java: New FilterReader
+	for counting input.
+
+1999-04-14  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION 0.17
+
+	* src/DE/uni_bremen/juse/gui/editor/DiagramComponentPropertiesDlg.java:
+	Improved.
+
+	* src/DE/uni_bremen/juse/gui/editor/Selection.java: Added
+	EventListener protocol.
+
+	* src/DE/uni_bremen/juse/gui/editor/GElemPainter.java
+	(visitLabel): Adjust font size to current zoom settings.
+
+	* src/DE/uni_bremen/juse/diagram/ClassDiagram.java
+	(autoLayout): Use GridLayouter.
+
+1999-04-13  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* src/DE/uni_bremen/juse/layout/GridLayouter.java: Cleaned up and
+	moved to separate package.
+
+1999-04-12  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION 0.16
+
+	* src/DE/uni_bremen/juse/gui/editor/DiagramComponentPropertiesDlg.java:
+	New class for properties of diagram elements.
+
+	* src/DE/uni_bremen/juse/graph/GridLayouter.java: New class for
+	grid layout of directed graphs.
+
+1999-04-10  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* src/DE/uni_bremen/juse/gelem/GEPath.java: Added end
+	labels and center label. Improved positioning of labels.
+
+	* src/DE/uni_bremen/juse/geom/GDir.java: Added constant NONE.
+
+	* src/DE/uni_bremen/juse/geom/GRectangle.java
+	(buildStraightPathTo): Changed return value.
+
+	* src/DE/uni_bremen/juse/geom/GLineConnector.java: New class.
+
+	* All: Fixed documentation warnings from javadoc.
+
+1999-04-09  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION 0.15
+
+	* src/DE/uni_bremen/juse/gui/editor/ClassDiagramView.java
+	(ClassDiagramView): Add generalizations to diagram.
+
+	* src/DE/uni_bremen/juse/graph/DirectedGraphBase.java
+	(edgeIterator): New method.
+
+	* src/DE/uni_bremen/juse/graph/DirectedGraph.java (edgeIterator):
+	New method.
+
+	* src/DE/uni_bremen/juse/diagram/DGeneralization.java
+	(DGeneralization): New implementation.
+
+	* src/DE/uni_bremen/juse/diagram/ClassDiagram.java
+	(createFromModel): Added creation of generalization elements.
+
+	* src/DE/uni_bremen/juse/gui/editor/GElemPainter.java
+	(visitPolygon): Fill area if color is specified.
+
+	* src/DE/uni_bremen/juse/gelem/GEPath.java: Added end adornments.
+
+1999-04-08  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION 0.14
+
+	* src/DE/uni_bremen/juse/model/MModel.java: Use DirectedGraph for
+	generalization graph.
+
+	* src/DE/uni_bremen/juse/graph: New package for graphs.
+
+	* src/DE/uni_bremen/juse/model/MModelPrintVisitor.java: print
+	generalization relationship.
+
+	* src/DE/uni_bremen/juse/model/MType.java: Added hashCode
+	method.
+
+	* src/DE/uni_bremen/juse/model/MClass.java: Added hashCode and
+	equals method.
+
+	* src/DE/uni_bremen/juse/model/MAttribute.java: Added equals
+	method.
+
+1999-03-30  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION 0.13
+
+	* VERSION 0.12
+
+	* src/DE/uni_bremen/juse/util/TextWriter.java: First work on
+	ASCII serializable diagram elements.
+
+	* src/DE/uni_bremen/juse/gui/editor/DiagramAssocComponent.java:
+	Bugfix: need a call to setOpaque(false) since a JPanel (which we
+	inherit from) is by default opaque.
+
+1999-03-29  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* src/DE/uni_bremen/juse/geom/GColor.java: Added some more default
+	colors.
+
+	* src/DE/uni_bremen/juse/gelem/XfigGenerator.java: Added color map
+	for standard colors. Use colors in all elements.
+
+1999-03-28  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION 0.11
+
+	* src/DE/uni_bremen/juse/gui/editor/DiagramPanel.java: Added
+	background sheet feature.
+
+	* src/DE/uni_bremen/juse/gui/editor/ClassDiagramView.java:
+	Restructered View menu. Add sheet selection.
+
+	* src/DE/uni_bremen/juse/gelem/GElement.java: Provide color for
+	all derived elements.
+
+	* src/DE/uni_bremen/juse/gui/editor/GElemPainter.java: Moved
+	selection drawing from DiagramComponent to here. Removed all
+	translations of coordinates. The Graphics object is now correctly
+	translated before drawing is done.
+
+1999-03-24  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION 0.10
+
+	* src/DE/uni_bremen/juse/gui/editor/DrawController.java: Added
+	panning by dragging the DiagramPanel with button-2.
+
+Tue Mar 23 19:19:14 1999  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* src/DE/uni_bremen/juse/gui/editor/ClassDiagramView.java: Added
+ 	menu items for grid.
+
+Mon Mar 22 18:47:20 1999  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION 0.9
+
+	* Changed the approach of having a finite diagram sheet to provide
+ 	a view of a potentially infinite diagram. Dropped the scroll panel
+ 	for this.
+	
+	* src/DE/uni_bremen/juse/gui/editor/DiagramView.java: Renamed from
+ 	DrawScrollPane.
+
+	* src/DE/uni_bremen/juse/gui/editor/ClassDiagramView.java: Added
+ 	actions for panning the diagram view.
+
+	* src/DE/uni_bremen/juse/geom/GScale.java: Added viewport
+ 	facility.
+
+Sun Mar 21 00:01:27 1999  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* src/DE/uni_bremen/juse/gui/editor/ClassDiagramView.java: Made
+ 	all actions instance variables since they may have local state.
+
+	* VERSION 0.8
+
+	* src/DE/uni_bremen/juse/gui/editor/DrawScrollPane.java: Set size
+ 	of rulers according to size of DiagramPanel.
+
+	* src/DE/uni_bremen/juse/gui/editor/DiagramPanel.java: Respect
+ 	clip area in paintComponent(). Added option for grid appearance.
+
+	* VERSION 0.7
+
+	* src/DE/uni_bremen/juse/diagram/DBinaryAssociation.java: Started
+ 	work on labels.
+
+	* src/DE/uni_bremen/juse/diagram/DAssociation.java: Now base class
+ 	of DBinaryAssociation.
+
+Sat Mar 20 23:20:44 1999  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* src/DE/uni_bremen/juse/gui/editor/DiagramPanel.java: paint()
+ 	draws grid according to the GScale setting of the panel.
+
+	* src/DE/uni_bremen/juse/gui/editor/DrawScrollPane.java: paint()
+ 	methods rewritten and fixed for accurate scaling and zooming.
+
+Fri Mar 19 18:38:44 1999  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION 0.6
+
+	* src/DE/uni_bremen/juse/gui/editor/ClassDiagramView.java: Added
+ 	zoom facility.
+
+	* src/DE/uni_bremen/juse/geom/GScale.java: Added grid feature for
+ 	source device.
+
+	* src/DE/uni_bremen/juse/gui/editor/DiagramClassComponent.java: In
+ 	moveComponent(): respect grid while moving to new position.
+
+	* VERSION 0.5
+
+	* src/DE/uni_bremen/juse/geom/GScale.java: Replaces class
+ 	DrawUtil.
+
+	* src/DE/uni_bremen/juse/geom: New package for geometric
+ 	objects. Objects in the gelem package now use these for specifying
+ 	their geometry.
+
+	* src/DE/uni_bremen/juse/geom/GRectangle.java:
+ 	buildStraightPathTo() connects two rectangles.
+
+Tue Mar 16 21:38:34 1999  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION 0.4
+
+        * lots of minor changes.
+	
+	* src/DE/uni_bremen/juse/gui/editor/DiagramComponent.java: Keep
+ 	list of event listeners.
+
+	* src/DE/uni_bremen/juse/diagram/DElement.java: Keep list of event
+ 	listeners.
+
+Mon Mar 15 23:11:26 1999  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION 0.3
+
+	* src/DE/uni_bremen/juse/gui/editor/GraphPainter.java: Added
+ 	visitPolyLine() and visitPolygon().
+
+	* src/DE/uni_bremen/juse/gelem/GElement.java: Added boundingBox()
+ 	for all subclasses.
+
+	* src/DE/uni_bremen/juse/gelem/GRectangle.java: Now a rectangular
+ 	dimension.
+
+	* src/DE/uni_bremen/juse/gelem/GBox.java: Renamed from GRectangle.
+
+Sun Mar 14 22:54:05 1999  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION 0.2
+
+	* src/DE/uni_bremen/juse/gelem/GPath.java: New file. Lines with
+ 	adornments.
+
+	* gui: Added packages.
+
+Fri Mar 12 18:10:51 1999  Mark Richters  <mr@informatik.uni-bremen.de>
+
+	* VERSION 0.1
+
+	* Project derived from jise-0.26
+

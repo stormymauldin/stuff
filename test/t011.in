@@ -1,0 +1,17 @@
+# $ProjectHeader: use 2-1-0-release.1 Sun, 09 May 2004 13:57:11 +0200 mr $
+
+# See the README file in this directory for information about the file
+# format.
+
+!create a:Person
+!create b:Person
+!set a.secNumber:=2
+!set b.secNumber:=5
+
+# Test for bug0014 (internal error)
+
+? Person.allInstances->sortedBy(p | p.secNumber)
+*-> Sequence{@a,@b} : Sequence(Person)
+
+exit
+

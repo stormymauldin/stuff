@@ -1,0 +1,13 @@
+-- $ProjectHeader: use 2-1-0-release.1 Sun, 09 May 2004 13:57:11 +0200 mr $
+
+model Math
+
+class Math
+operations
+  gcd(x : Integer, y : Integer) : Integer
+    post:
+      Sequence{1..x.max(y)}->exists(i, j | 
+	(result * i = x) and (result * j = y)
+	and not Sequence{1..x.max(y)}->exists(k | 
+ 	  (k * i = x) and (k * j = y) and k > result))
+end

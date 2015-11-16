@@ -1,0 +1,30 @@
+# $ProjectHeader: use 2-1-0-release.1 Sun, 09 May 2004 13:57:11 +0200 mr $
+
+# See the README file in this directory for information about the file
+# format.
+
+### test object destruction and reference to destroyed object
+
+!create a : A
+!create b : B
+!set a.aAttr := b
+!set b.bAttr := 42
+
+? a.aAttr
+*-> @b : B
+
+? a.aAttr.bAttr
+*-> 42 : Integer
+
+!destroy b
+
+# the attribute still points to b, ...
+? a.aAttr
+*-> @b : B
+
+# ..., however an attempt to access the object results in undefined
+? a.aAttr.bAttr
+*-> Undefined : Integer
+
+exit
+

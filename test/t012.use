@@ -1,0 +1,27 @@
+-- $ProjectHeader: use 2-1-0-release.1 Sun, 09 May 2004 13:57:11 +0200 mr $
+
+model t012
+
+class A
+operations
+  swap_b()
+end
+
+class B
+end
+
+association R1 between 
+  A[*] role ra1
+  B[1] role rb1
+end
+
+association R2 between 
+  A[*] role ra2
+  B[1] role rb2
+end
+
+-- constraints
+
+-- context A::swap_b() 
+--   post: self.rb1 = self.rb2@pre
+--   post: self.rb2 = self.rb1@pre

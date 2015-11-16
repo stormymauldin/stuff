@@ -1,0 +1,33 @@
+-- Course Registration example for ReqEng Assignment 4
+
+model CourseRegistration_1_1
+
+
+-- classes
+
+class University
+end
+
+class Student
+attributes
+  id : String
+end
+
+
+-- associations
+
+association EnrolledAtUniversity between
+  Student[*] role students
+  University[0..1] role isEnrolledAt
+end
+
+
+-- OCL constraints
+
+constraints
+
+context University
+    -- A student's id number must be exactly
+    -- four characters long
+    inv StudentIdMustBeLength4:
+       self.students->forAll(s|s.id.size() = 4)

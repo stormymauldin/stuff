@@ -1,0 +1,15 @@
+-- $ProjectHeader: use 2-1-0-release.1 Sun, 09 May 2004 13:57:11 +0200 mr $
+
+model NestedOperationCalls
+
+class Rec
+operations
+  fac(n : Integer) : Integer =
+    if n <= 1 then 1 else n * self.fac(n - 1) endif
+end
+
+constraints
+
+context Rec::fac(n : Integer) : Integer
+  pre:  n > 0
+  post: result = n * fac(n - 1)

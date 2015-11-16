@@ -1,0 +1,30 @@
+# $ProjectHeader: use 2-1-0-release.1 Sun, 09 May 2004 13:57:11 +0200 mr $
+
+# See the README file in this directory for information about the file
+# format.
+
+### test undo of object creation
+
+!create a1 : A
+!create a2 : A
+!create a3 : A
+undo
+!create a3 : A
+undo
+undo
+undo
+!create a1 : A
+!create a2 : A
+!create a3 : A
+
+? a1
+*-> @a1 : A
+
+? a2
+*-> @a2 : A
+
+? a2
+*-> @a2 : A
+
+exit
+

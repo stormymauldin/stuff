@@ -1,0 +1,14 @@
+This directory contains some example specifications. You can test USE
+by typing `make test'. This will do a syntax and semantic check on
+each specification. Many of the case studies are not yet complete and
+may contain experimental stuff.
+
+Files that end with `-mm.cmd' are command files for producing a UML
+metamodel instance of a model. They can be generated with `make
+mm'. Then, try running
+	
+	use -v -nogui UML13All.use <model>-mm.cmd
+
+and check whether <model> is a valid UML model by issuing a `check'
+command at the prompt.
+

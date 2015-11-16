@@ -1,0 +1,34 @@
+-- Course Registration example for ReqEng Assignment 4
+
+model CourseRegistration_1_3
+
+-- classes
+
+class University
+end
+
+class Student
+attributes
+  maxApprovedSemesterHours : Integer
+end
+
+class Course
+end
+
+
+
+-- associations
+
+association EnrolledAtUniversity between
+  Student[*] role students
+  University[0..1] role isEnrolledAt
+end
+
+association TakingCourse between
+  Student[*] role studentsEnrolled
+  Course[*] role takingCourses
+end
+
+
+-- OCL constraints
+

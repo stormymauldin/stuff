@@ -1,0 +1,48 @@
+-- $ProjectHeader: use 2-1-0-release.1 Sun, 09 May 2004 13:57:11 +0200 mr $
+
+model Polygon
+
+-- classes
+
+class Point
+attributes
+  x : Real
+  y : Real
+operations
+  translate(dx : Real, dy : Real)
+end
+
+class ColorPoint < Point
+attributes
+  color : String
+operations
+  translate(dx : Real, dy : Real)
+end
+
+class Polygon
+operations
+  translate(dx : Real, dy : Real)
+end
+
+-- associations
+
+association Polygon_Point between
+  Polygon[0..1]
+  Point[2..*] ordered
+end
+
+-- constraints
+
+constraints
+
+context Point::translate(dx : Real, dy : Real)
+  post translatePointPost: 
+    (x = x@pre + dx) and (y = y@pre + dy)
+
+context ColorPoint::translate(dx : Real, dy : Real)
+  post translateColorPointPost: 
+    color = color@pre
+
+context Polygon::translate(dx : Real, dy : Real)
+  post translatePolygonPost: 
+    point->forAll(p | (p.x = p.x@pre + dx) and (p.y = p.y@pre + dy))

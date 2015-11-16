@@ -1,0 +1,2 @@
+- enumeration type names must be unique
+- enumeration type names and class names must be different

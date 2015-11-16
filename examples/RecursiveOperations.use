@@ -1,0 +1,14 @@
+-- $ProjectHeader: use 2-1-0-release.1 Sun, 09 May 2004 13:57:11 +0200 mr $
+
+model RecursiveOperations
+
+-- classes
+
+class Rec
+operations
+  recurse() : Integer =
+    1 + self.recurse()
+
+  fac(n : Integer) : Integer =
+    if n <= 1 then 1 else n * self.fac(n - 1) endif
+end
