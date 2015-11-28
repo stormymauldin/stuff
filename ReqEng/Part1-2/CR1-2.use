@@ -28,3 +28,10 @@ end
 
 
 -- OCL constraints
+
+constraints
+
+context University
+    -- A student cannot be both a graduate and an undergraduate
+    inv StudentCannotBeGradAndUndergrad:
+        self.undergraduates->excludesAll(self.graduates)
