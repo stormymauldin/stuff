@@ -32,3 +32,9 @@ end
 
 -- OCL constraints
 
+constraints
+
+context University
+-- A student cannot be both a graduate and an undergraduate
+    inv StudentCannotTakeMoreHoursThanApproved:
+        self.students->forAll(s|s.maxApprovedSemesterHours >= (3*(s.takingCourses->size)))
