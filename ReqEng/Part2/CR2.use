@@ -35,3 +35,25 @@ end
 
 -- OCL constraints
 
+constraints
+
+context Student::drop(c : Course)
+
+    pre canDropCourse:
+        -- Make sure student is taking the course
+        self.takingCourses->includes(c) and
+        -- Make sure student is taking more than one course
+        self.takingCourses->size > 1
+
+    post successfullyDroppedCourse:
+        -- Make sure student is no longer taking the course
+        self.takingCourses->excludes(c) and
+        -- Make sure the student only dropped that course
+        self.takingCourses->size = self.takingCourses@pre->size - 1 and
+        -- Make sure that course is no longer full
+        c.isFull = false and
+        -- Make sure that student is still enrolled at the university
+        self.isEnrolledAt = self.isEnrolledAt@pre and
+        -- Make sure that only one student was dropped from that course
+        c.studentsEnrolled->size = c.studentsEnrolled@pre->size - 1
+
